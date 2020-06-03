@@ -1,0 +1,13 @@
+.footer {
+    background: $colorSecundario;
+
+    margin-top: 5rem;
+
+    & p {
+        padding: 2rem;
+        color: $colorPrimario;
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 400;
+    }
+}

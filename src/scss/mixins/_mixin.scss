@@ -1,0 +1,73 @@
+@mixin cursorPointer {
+    cursor: pointer;
+}
+
+@mixin filtro($num:0) {
+    filter: grayscale($num);
+    -webkit-filter: grayscale($num);
+}
+
+////////////////////////////////////////////////
+//// configuracion de content
+@mixin configDivContent {
+    position: relative;
+    overflow: hidden;
+}
+
+@mixin configP {
+    position: absolute;
+    bottom: -8rem;
+    left: 0;
+    padding: 1.5rem 1rem;
+    background-color: $transparencia;
+    width: 100%;
+    text-align: left;
+    color: $colorPrimario;
+    text-transform: uppercase;
+    opacity: 0;
+    font-size: 1.6rem;
+}
+
+/////////////////////////////////////////////////////////////////////
+@mixin animacion($time:.5s, $effect:ease-in-out) {
+    transition: $time $effect;
+    -webkit-transition: $time $effect;
+    -moz-transition: $time $effect;
+    -ms-transition: $time $effect;
+    -o-transition: $time $effect;
+}
+
+@mixin sombra($x:0, $y:.9rem, $blur:1rem, $sombra:rgba(0, 0, 0, 0.3)) {
+    box-shadow: $x $y $blur $sombra;
+}
+
+@mixin escala($scale:1.1) {
+    transform: scale($scale);
+    -webkit-transform: scale($scale);
+    -moz-transform: scale($scale);
+    -ms-transform: scale($scale);
+    -o-transform: scale($scale);
+}
+
+@mixin borderRadius($radius:.5rem) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+}
+
+@mixin button($colorBg:#adf, $padUpDown:1rem, $padLeftR:2rem, $colorLet:white) {
+    // display: block;  
+    padding: $padUpDown $padLeftR;
+    color: $colorLet;
+    background-color: $colorBg;
+    text-decoration: none;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    border: .1rem solid $colorBg;
+    cursor: pointer;
+}

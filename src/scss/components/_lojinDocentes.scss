@@ -1,0 +1,100 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(../../../dist/img/profesores.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+
+}
+
+.login {
+    text-align: center;
+    width: 35rem;
+    padding: 4rem;
+    background: $colorPrimario;
+    @include sombra(0, .5rem, 2rem);
+    @include borderRadius();
+
+    & h2 {
+        margin: 0 0 2rem;
+        padding: 0;
+        font-size: 2.5rem;
+        text-transform: uppercase;
+        color: $color3;
+    }
+
+
+    & a {
+        font-size: 1.6rem;
+        color: $color3;
+        text-decoration: none;
+
+    }
+
+}
+
+.form {
+
+    & .grupo-input {
+        position: relative;
+        width: 100%;
+        margin-bottom: 2.5rem;
+
+        &__campoUser,
+        &__campoPassword {
+            height: 5rem;
+            width: 100%;
+            padding: 0 2rem;
+            font-size: 1.8rem;
+            outline: none;
+            border: 1px solid #000;
+            color: $color3;
+            @include animacion();
+            @include borderRadius(.2rem);
+
+            &:focus {
+                color: $color7;
+            }
+
+            &:focus~span,
+            &:valid~span {
+
+                top: -1.2rem;
+                left: 1.2rem;
+                font-size: 1.2rem;
+                padding: .2rem .4rem;
+                border: .1rem solid #000;
+                background: $color6;
+                color: $colorPrimario;
+            }
+        }
+
+        & span {
+            position: absolute;
+            top: 1.2rem;
+            left: 2rem;
+            pointer-events: none;
+            background: #fff;
+            text-transform: uppercase;
+            @include animacion();
+        }
+
+        &__campoSubmit {
+            @include button($color6, 1rem, 2rem);
+            @include animacion();
+            font-size: 1.6rem;
+            font-weight: 500;
+            width: 100%;
+
+            &:hover {
+                color: $color6;
+                background-color: $colorPrimario;
+            }
+        }
+
+    }
+}

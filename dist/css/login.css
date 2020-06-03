@@ -1,0 +1,157 @@
+html {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.vista {
+  height: 100vh;
+}
+
+.section-form {
+  font-family: sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.form {
+  width: 35rem;
+  min-height: 40rem;
+  background: #fff;
+  -webkit-box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+  padding: 5rem;
+}
+
+.form__title {
+  font-size: 2rem;
+  color: #777;
+  margin: 0 0 0 4rem;
+}
+
+.form__caja-input {
+  position: relative;
+  margin: 2rem 0;
+}
+
+.form__caja-input--input-1, .form__caja-input--input-2 {
+  width: 100%;
+  font-size: 1.6rem;
+  border: none;
+  border-bottom: 0.2rem solid #777;
+  outline: none;
+  padding: 1rem;
+  padding-left: 2.5rem;
+  font-weight: bold;
+  color: #777;
+}
+
+.form__caja-input--input-1:focus, .form__caja-input--input-1:valid, .form__caja-input--input-2:focus, .form__caja-input--input-2:valid {
+  border-bottom: 0.2rem solid rgba(6, 119, 194, 0.667);
+}
+
+.form__caja-input .fas {
+  position: absolute;
+  top: .8rem;
+  left: 0;
+  font-size: 1.8rem;
+  color: #777;
+}
+
+.form__caja-input--input-3 {
+  width: 100%;
+  font-size: 1.6rem;
+  border: 0.1rem solid rgba(6, 119, 194, 0.667);
+  outline: none;
+  padding: 1rem;
+  padding-left: 2.5rem;
+  font-weight: bold;
+  color: #777;
+  background: rgba(6, 119, 194, 0.667);
+  margin: 3rem auto;
+  color: #fff;
+  font-weight: bold;
+  -webkit-transition: .5s;
+  transition: .5s;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  cursor: pointer;
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.form__caja-input--input-3:hover {
+  background-color: #fff;
+  color: rgba(6, 119, 194, 0.667);
+  border: 0.1rem solid rgba(6, 119, 194, 0.667);
+}
+
+.form__password {
+  text-decoration: none;
+  color: #777;
+  margin-top: 2rem;
+  font-weight: bold;
+  display: inline-block;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  font-size: 1.5rem;
+}
+
+.form__password:hover {
+  color: red;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.bg-video__content {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+/*# sourceMappingURL=login.css.map */

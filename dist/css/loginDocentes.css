@@ -1,0 +1,157 @@
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+.vista {
+  height: 100vh;
+}
+
+.login-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url(dist/img/profesores.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.login {
+  text-align: center;
+  width: 35rem;
+  padding: 4rem;
+  background: #fff;
+  -webkit-box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.5rem 2rem rgba(0, 0, 0, 0.3);
+  border-radius: 0.5rem;
+  -webkit-border-radius: 0.5rem;
+  -moz-border-radius: 0.5rem;
+  -ms-border-radius: 0.5rem;
+  -o-border-radius: 0.5rem;
+}
+
+.login h2 {
+  margin: 0 0 2rem;
+  padding: 0;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #777;
+}
+
+.login a {
+  font-size: 1.6rem;
+  color: #777;
+  text-decoration: none;
+}
+
+.form .grupo-input {
+  position: relative;
+  width: 100%;
+  margin-bottom: 2.5rem;
+}
+
+.form .grupo-input__campoUser,
+.form .grupo-input__campoPassword {
+  height: 5rem;
+  width: 100%;
+  padding: 0 2rem;
+  font-size: 1.8rem;
+  outline: none;
+  border: 1px solid #000;
+  color: #777;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  border-radius: 0.2rem;
+  -webkit-border-radius: 0.2rem;
+  -moz-border-radius: 0.2rem;
+  -ms-border-radius: 0.2rem;
+  -o-border-radius: 0.2rem;
+}
+
+.form .grupo-input__campoUser:focus,
+.form .grupo-input__campoPassword:focus {
+  color: #000;
+}
+
+.form .grupo-input__campoUser:focus~span,
+.form .grupo-input__campoUser:valid~span,
+.form .grupo-input__campoPassword:focus~span,
+.form .grupo-input__campoPassword:valid~span {
+  top: -1.2rem;
+  left: 1.2rem;
+  font-size: 1.2rem;
+  padding: .2rem .4rem;
+  border: .1rem solid #000;
+  background: #312b73;
+  color: #fff;
+}
+
+.form .grupo-input span {
+  position: absolute;
+  top: 1.2rem;
+  left: 2rem;
+  pointer-events: none;
+  background: #fff;
+  text-transform: uppercase;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+}
+
+.form .grupo-input__campoSubmit {
+  padding: 1rem 2rem;
+  color: white;
+  background-color: #312b73;
+  text-decoration: none;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+  border: 0.1rem solid #312b73;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  font-size: 1.6rem;
+  font-weight: 500;
+  width: 100%;
+}
+
+.form .grupo-input__campoSubmit:hover {
+  color: #312b73;
+  background-color: #fff;
+}
+
+/*# sourceMappingURL=loginDocentes.css.map */
