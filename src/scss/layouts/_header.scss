@@ -7,6 +7,12 @@
 
     & img {
         max-width: 45%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    &__img-container {
+        align-self: center;
     }
 }
 

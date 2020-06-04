@@ -1,0 +1,97 @@
+.dropdown-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+    gap: 5rem;
+    margin-top: 5rem;
+    
+    & img {
+        display: block;
+        margin: 0 auto;
+        @include animacion();
+
+        &:hover {
+            @include escala(.5);
+            @include filtro(1);
+        }
+    }
+}
+
+.dropdown {
+    &__menu {
+        position: relative;
+        @include configDivContent();
+        @include animacion();
+        @include cursorPointer();
+
+
+        &:hover p {
+            opacity: 1;
+            bottom: 0;
+        }
+
+        & p {
+            @include configP();
+            @include animacion(.8s);
+        }
+
+        & img {
+            max-width: 100%;
+        }
+    }
+
+    &__content {
+     
+        display: none;
+
+        @include animacion();
+
+        &.active {
+            display: block;
+        }
+
+        &--element {
+            list-style: none;
+            margin-top: 2rem;
+
+            & a {
+                display: block;
+                font-size: 1.6rem;
+                text-decoration: none;
+                color: $color6;
+                @include animacion();
+
+                &:hover {
+                    text-decoration: underline;
+                    @include escala();
+                }
+            }
+        }
+
+
+    }
+}
+
+.card-title {
+    & p {
+
+        &::after {
+            color: $colorPrimario;
+            position: absolute;
+            content: '>';
+            font-size: 4.2rem;
+            bottom: 0;
+            right: 2rem;
+            transform: rotate(90deg) scale(0.5, 1);
+            -webkit-transform: rotate(90deg) scale(0.5, 1);
+            -moz-transform: rotate(90deg) scale(0.5, 1);
+            -ms-transform: rotate(90deg) scale(0.5, 1);
+            -o-transform: rotate(90deg) scale(0.5, 1);
+        }
+
+        &.active::after {
+            transform: rotate(-90deg) scale(0.5, 1);
+        }
+    }
+
+
+}

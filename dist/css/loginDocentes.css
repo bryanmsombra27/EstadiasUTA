@@ -34,7 +34,7 @@ html {
   -ms-flex-align: center;
   align-items: center;
   height: 100vh;
-  background-image: url(dist/img/profesores.jpg);
+  background-image: url(../img/profesores.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

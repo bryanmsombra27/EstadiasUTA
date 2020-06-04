@@ -1,0 +1,43 @@
+.content {
+    padding-top: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5rem;
+    align-items: center;
+    justify-content: center;
+    @include animacion();
+
+    & img {
+        display: block;
+        margin: 0 auto;
+        max-width: 50%;
+        @include animacion();
+
+        &:hover {
+            @include escala();
+        }
+    }
+
+    &__menu {
+        position: relative;
+        @include configDivContent();
+        @include animacion();
+        @include cursorPointer();
+        @include sombra();
+
+        &:hover {
+            @include escala();
+        }
+
+        &:hover p {
+            opacity: 1;
+            bottom: 0;
+        }
+
+        & p {
+            @include configP();
+            @include animacion(.8s);
+        }
+    }
+
+}
