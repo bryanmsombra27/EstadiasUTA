@@ -7,6 +7,17 @@
     font-size: 3.5rem;
 }
 
+.coordinadores {
+    & a {
+        display: block;
+        width: 17%;
+        text-align: center;
+        margin-top: 3rem;
+        font-size: 1.6rem;
+        align-self: center;
+    }
+}
+
 .register-field {
     margin: 3rem auto;
     width: 100%;

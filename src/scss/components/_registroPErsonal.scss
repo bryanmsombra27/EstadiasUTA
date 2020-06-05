@@ -1,0 +1,87 @@
+.form-personal {
+    min-height: 100vh;
+    margin-top: 5rem;
+
+    &__input {
+        @include inputFormFormat();
+        @include borderRadius();
+        @include animacion();
+
+        &:active,
+        &:focus {
+            border: .1rem groove $color4;
+            @include borderRadius(15px);
+            color: $color7;
+        }
+    }
+
+    &__submit {
+        display: block;
+        font-size: 1.6rem;
+        width: 20%;
+        margin: 0 auto;
+        @include button($color4);
+        @include animacion();
+
+        &:hover {
+            color: $color4;
+            background: $colorPrimario;
+        }
+    }
+}
+
+.register {
+    &__buttons {
+        display: flex;
+        justify-content: space-between;
+
+
+
+        &--1 {
+            @include button($color10);
+            @include animacion();
+
+            &:hover {
+                color: $color10;
+                background-color: $colorPrimario;
+            }
+        }
+
+        &--2 {
+            @include button($color8);
+            @include animacion();
+
+            &:hover {
+                background-color: $colorPrimario;
+                color: $color8;
+            }
+        }
+    }
+
+    &__input {
+        @include inputFormFormat();
+        @include borderRadius();
+        @include animacion();
+
+        &:active,
+        &:focus {
+            border: .1rem groove $color4;
+            @include borderRadius(15px);
+            color: $color7;
+        }
+
+        &--submit {
+            display: block;
+            font-size: 1.6rem;
+            width: 20%;
+            margin: 0 auto;
+            @include button($color4);
+            @include animacion();
+
+            &:hover {
+                color: $color4;
+                background: $colorPrimario;
+            }
+        }
+    }
+}
