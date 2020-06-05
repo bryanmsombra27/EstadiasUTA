@@ -71,3 +71,11 @@
     border: .1rem solid $colorBg;
     cursor: pointer;
 }
+
+@mixin inputFormFormat($wd: 100%, $padUpAbajo:1rem, $padLados:2rem, $borderS:.1rem, $borderC:#777) {
+    width: $wd;
+    padding: $padUpAbajo $padLados;
+    outline: none;
+    border: $borderS solid $color3;
+    color: $borderC;
+}

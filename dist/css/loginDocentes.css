@@ -63,9 +63,12 @@ html {
 }
 
 .login a {
+  display: block;
   font-size: 1.6rem;
   color: #777;
   text-decoration: none;
+  padding-top: 1rem;
+
 }
 
 .form .grupo-input {
