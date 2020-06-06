@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../css/login.css">
+    <script src="../../js/escolares.js" defer></script>
 </head>
 
 <body>
@@ -16,17 +17,19 @@
         </video>
     </div>
     <section class="section-form">
-        <div class="form">
+        <div class="form" id="form-escolares">
             <form action="#">
                 <h2 class="form__title">Inicia Sesión</h2>
                 <div class="form__caja-input">
 
-                    <input type="text" placeholder="Usuario" required class="form__caja-input--input-1">
+                    <input type="text" placeholder="Usuario" required class="form__caja-input--input-1" name="user"
+                        id="user">
                 </div>
 
                 <div class="caja-input">
 
-                    <input type="password" placeholder="Contraseña" required class="form__caja-input--input-2">
+                    <input type="password" placeholder="Contraseña" required class="form__caja-input--input-2"
+                        id="password" name="password">
                 </div>
 
                 <div class="caja-input">
