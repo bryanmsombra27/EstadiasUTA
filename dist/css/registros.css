@@ -97,7 +97,7 @@ html {
 }
 
 .register-career {
-  height: 100vh;
+  min-height: calc(100vh - 30rem);
   margin-top: 5rem;
 }
 

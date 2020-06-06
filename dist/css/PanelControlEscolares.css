@@ -1,6 +1,6 @@
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 62.5%;
 }
 
@@ -8,7 +8,7 @@ html {
 *:after,
 *:before {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -38,8 +38,8 @@ html {
 
 .header__img-container {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .header-container {
@@ -49,11 +49,11 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .content {
@@ -61,14 +61,14 @@ html {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(250px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 5rem;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
   transition: 0.5s ease-in-out;
   -webkit-transition: 0.5s ease-in-out;
   -moz-transition: 0.5s ease-in-out;
@@ -106,7 +106,7 @@ html {
   -o-transition: 0.5s ease-in-out;
   cursor: pointer;
   -webkit-box-shadow: 0 0.9rem 1rem rgba(0, 0, 0, 0.3);
-          box-shadow: 0 0.9rem 1rem rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.9rem 1rem rgba(0, 0, 0, 0.3);
 }
 
 .content__menu:hover {
@@ -158,9 +158,10 @@ html {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(170px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 5rem;
   margin-top: 5rem;
+  min-height: calc(100vh - 20rem);
 }
 
 .dropdown-container img {
@@ -278,6 +279,7 @@ html {
 
 .card-title p.active::after {
   -webkit-transform: rotate(-90deg) scale(0.5, 1);
-          transform: rotate(-90deg) scale(0.5, 1);
+  transform: rotate(-90deg) scale(0.5, 1);
 }
+
 /*# sourceMappingURL=PanelControlEscolares.css.map */
