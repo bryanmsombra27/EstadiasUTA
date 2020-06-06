@@ -1,0 +1,88 @@
+.table-container {
+    min-height: 100vh;
+    margin-top: 4rem;
+}
+
+.table {
+    &__size {
+        width: 100%;
+    }
+
+    &__header {}
+
+    &__row {
+        font-size: 1.8rem;
+    }
+
+    &__head {
+        padding: 1rem;
+        font-family: sans-serif;
+    }
+
+    &__content {
+
+        text-align: center;
+        font-size: 1.6rem;
+    }
+
+    &__item {
+        border: .1rem solid #ccc;
+        padding: 1rem;
+        @include animacion();
+
+        &--modify {
+            display: inline-block;
+            margin: 1rem auto;
+            @include button($color11);
+            @include animacion();
+
+            &:hover {
+                color: $color11;
+                background-color: $colorPrimario;
+            }
+
+        }
+
+        &--delete {
+            display: inline-block;
+            margin: 1rem auto 1rem 1.9rem;
+            @include button($color8);
+            @include animacion();
+
+            &:hover {
+                color: $color8;
+                background: $colorPrimario;
+            }
+        }
+
+        &--actions {
+            border: .1rem solid #ccc;
+        }
+
+
+    }
+
+    &__row2 {
+        width: 100%;
+        @include animacion();
+
+        &:hover {
+            @include escala();
+        }
+    }
+
+    &__button {
+        display: block;
+        text-align: center;
+        width: 17%;
+        font-size: 1.6rem;
+        margin-top: 5rem;
+        @include button($color10);
+        @include animacion();
+
+        &:hover {
+            color: $color10;
+            background-color: $colorPrimario;
+        }
+    }
+}

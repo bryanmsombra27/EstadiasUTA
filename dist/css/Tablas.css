@@ -1,6 +1,6 @@
 html {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
   font-size: 62.5%;
 }
 
@@ -8,7 +8,7 @@ html {
 *:after,
 *:before {
   -webkit-box-sizing: inherit;
-  box-sizing: inherit;
+          box-sizing: inherit;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -23,7 +23,16 @@ html {
   font-size: 3.5rem;
 }
 
-
+.coordinadores a {
+  display: block;
+  width: 17%;
+  text-align: center;
+  margin-top: 3rem;
+  font-size: 1.6rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
 
 .register-field {
   margin: 3rem auto;
@@ -32,11 +41,11 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-  -ms-flex-pack: space-evenly;
-  justify-content: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .bottom {
@@ -58,8 +67,8 @@ html {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: auto 2rem;
 }
 
@@ -78,8 +87,8 @@ html {
 
 .header__img-container {
   -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .header-container {
@@ -89,49 +98,59 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-  -ms-flex-pack: start;
-  justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.register-career {
-  height: 100vh;
-  margin-top: 5rem;
+.table-container {
+  min-height: 100vh;
+  margin-top: 4rem;
 }
 
-.register-career a {
-  display: block;
-  width: 17%;
+.table__size {
+  width: 100%;
+}
+
+.table__row {
+  font-size: 1.8rem;
+}
+
+.table__head {
+  padding: 1rem;
+  font-family: sans-serif;
+}
+
+.table__content {
   text-align: center;
-  margin-top: 3rem;
   font-size: 1.6rem;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  align-self: center;
 }
 
-.register__buttons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
+.table__item {
+  border: .1rem solid #ccc;
+  padding: 1rem;
+  transition: 0.5s ease-in-out;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
 }
 
-.register__buttons--1 {
+.table__item--modify {
+  display: inline-block;
+  margin: 1rem auto;
   padding: 1rem 2rem;
   color: white;
-  background-color: #1d8aa5;
+  background-color: #e4a022;
   text-decoration: none;
   border-radius: .5rem;
   -webkit-border-radius: .5rem;
   -moz-border-radius: .5rem;
   -ms-border-radius: .5rem;
   -o-border-radius: .5rem;
-  border: 0.1rem solid #1d8aa5;
+  border: 0.1rem solid #e4a022;
   cursor: pointer;
   transition: 0.5s ease-in-out;
   -webkit-transition: 0.5s ease-in-out;
@@ -140,12 +159,14 @@ html {
   -o-transition: 0.5s ease-in-out;
 }
 
-.register__buttons--1:hover {
-  color: #1d8aa5;
+.table__item--modify:hover {
+  color: #e4a022;
   background-color: #fff;
 }
 
-.register__buttons--2 {
+.table__item--delete {
+  display: inline-block;
+  margin: 1rem auto 1rem 1.9rem;
   padding: 1rem 2rem;
   color: white;
   background-color: red;
@@ -164,22 +185,17 @@ html {
   -o-transition: 0.5s ease-in-out;
 }
 
-.register__buttons--2:hover {
-  background-color: #fff;
+.table__item--delete:hover {
   color: red;
+  background: #fff;
 }
 
-.register__input {
+.table__item--actions {
+  border: .1rem solid #ccc;
+}
+
+.table__row2 {
   width: 100%;
-  padding: 1rem 2rem;
-  outline: none;
-  border: 0.1rem solid #777;
-  color: #777;
-  border-radius: 0.5rem;
-  -webkit-border-radius: 0.5rem;
-  -moz-border-radius: 0.5rem;
-  -ms-border-radius: 0.5rem;
-  -o-border-radius: 0.5rem;
   transition: 0.5s ease-in-out;
   -webkit-transition: 0.5s ease-in-out;
   -moz-transition: 0.5s ease-in-out;
@@ -187,37 +203,30 @@ html {
   -o-transition: 0.5s ease-in-out;
 }
 
-.register__image {
-  display: block;
-  margin: 7rem auto;
+.table__row2:hover {
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 
-.register__input:active,
-.register__input:focus {
-  border: 0.1rem groove #019966;
-  border-radius: 15px;
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  -ms-border-radius: 15px;
-  -o-border-radius: 15px;
-  color: #000;
-}
-
-.register__input--submit {
+.table__button {
   display: block;
+  text-align: center;
+  width: 17%;
   font-size: 1.6rem;
-  width: 20%;
-  margin: 0 auto;
+  margin-top: 5rem;
   padding: 1rem 2rem;
   color: white;
-  background-color: #019966;
+  background-color: #1d8aa5;
   text-decoration: none;
   border-radius: .5rem;
   -webkit-border-radius: .5rem;
   -moz-border-radius: .5rem;
   -ms-border-radius: .5rem;
   -o-border-radius: .5rem;
-  border: 0.1rem solid #019966;
+  border: 0.1rem solid #1d8aa5;
   cursor: pointer;
   transition: 0.5s ease-in-out;
   -webkit-transition: 0.5s ease-in-out;
@@ -226,9 +235,9 @@ html {
   -o-transition: 0.5s ease-in-out;
 }
 
-.register__input--submit:hover {
-  color: #019966;
-  background: #fff;
+.table__button:hover {
+  color: #1d8aa5;
+  background-color: #fff;
 }
 
 .footer {
@@ -243,5 +252,4 @@ html {
   text-align: center;
   font-weight: 400;
 }
-
-/*# sourceMappingURL=registroMaterias.css.map */
+/*# sourceMappingURL=CarrerasRegistradas.css.map */
