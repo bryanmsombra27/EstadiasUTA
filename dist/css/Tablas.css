@@ -1,6 +1,6 @@
 html {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   font-size: 62.5%;
 }
 
@@ -8,7 +8,7 @@ html {
 *:after,
 *:before {
   -webkit-box-sizing: inherit;
-          box-sizing: inherit;
+  box-sizing: inherit;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
@@ -30,8 +30,8 @@ html {
   margin-top: 3rem;
   font-size: 1.6rem;
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .register-field {
@@ -41,11 +41,11 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .bottom {
@@ -67,8 +67,8 @@ html {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
   margin: auto 2rem;
 }
 
@@ -87,8 +87,8 @@ html {
 
 .header__img-container {
   -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
+  -ms-grid-row-align: center;
+  align-self: center;
 }
 
 .header-container {
@@ -98,21 +98,38 @@ html {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
+  -ms-flex-pack: start;
+  justify-content: start;
   -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .table-container {
-  min-height: 100vh;
+  min-height: calc(100vh - 31rem);
   margin-top: 4rem;
+}
+
+.content__extra-size {
+  min-width: 130vw;
+}
+
+.table__extra-size {
+  width: 100vw;
+}
+
+.table__item--modify.button__extra-size {
+  margin: 1rem;
+}
+
+a.table__item--delete.button__extra-size--delete {
+  margin: 0;
 }
 
 .table__size {
   width: 100%;
 }
+
 
 .table__row {
   font-size: 1.8rem;
@@ -240,6 +257,40 @@ html {
   background-color: #fff;
 }
 
+.table__button.red {
+  background-color: red;
+  border-color: red;
+}
+
+.table__button.inscribir {
+  width: 24%;
+  background-color: rgb(22, 155, 55);
+  border-color: rgb(22, 155, 55);
+}
+
+.table__button.inscribir:hover {
+  background-color: #fff;
+  color: rgb(22, 155, 55);
+}
+
+
+.table__button.red:hover {
+  background-color: #fff;
+  color: red;
+}
+
+.table__minimo {
+  min-height: calc(50vh - 12.5rem);
+}
+
+.hide__table {
+  display: none;
+}
+
+.table__margintop {
+  margin-top: 5rem;
+}
+
 .footer {
   background: rgba(6, 119, 194, 0.667);
   margin-top: 5rem;
@@ -252,4 +303,5 @@ html {
   text-align: center;
   font-weight: 400;
 }
+
 /*# sourceMappingURL=CarrerasRegistradas.css.map */

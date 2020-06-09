@@ -97,7 +97,7 @@ html {
 }
 
 .register-career {
-  min-height: calc(100vh - 30rem);
+  min-height: calc(100vh - 32rem);
   margin-top: 5rem;
 }
 
@@ -243,5 +243,81 @@ html {
   text-align: center;
   font-weight: 400;
 }
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input__query {
+  height: 50%;
+  margin: 0 auto;
+  width: 60%;
+}
+
+.flex .input__consultar-profesor {
+  display: inline-block;
+  margin: 0 auto 0 2rem;
+  width: 50%;
+  padding: 1rem 2rem;
+  color: #fff;
+  background-color: blueviolet;
+  border: .1rem solid blueviolet;
+  border-radius: .5rem;
+  -webkit-border-radius: .5rem;
+  -moz-border-radius: .5rem;
+  -ms-border-radius: .5rem;
+  -o-border-radius: .5rem;
+  text-decoration: none;
+  transition: .5s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+}
+
+.flex .input__consultar-profesor:hover {
+  color: blueviolet;
+  background-color: #fff;
+}
+
+.baja__container {
+  min-height: calc(100vh - 30rem);
+}
+
+.button_font-size {
+  font-size: 1.6rem;
+}
+
+.flex .button__reset {
+  background-color: rgb(206, 176, 42);
+  border: .1rem solid rgb(206, 176, 42);
+}
+
+.flex .button__reset:hover {
+  color: rgb(206, 176, 42);
+  background-color: #fff;
+
+}
+
+.button__margin-bottom {
+  margin-bottom: 5rem;
+}
+
+.hide__buttons {
+  display: none;
+}
+
+.title-center {
+  text-align: center;
+  margin-top: 6rem;
+}
+
+.title-margin-bottom {
+  margin-top: 10rem;
+  margin-bottom: 8rem;
+}
+
 
 /*# sourceMappingURL=registroMaterias.css.map */

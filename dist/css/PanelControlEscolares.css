@@ -30,6 +30,8 @@ html {
   padding: 1rem;
 }
 
+
+
 .header img {
   max-width: 45%;
   display: block;
@@ -161,7 +163,7 @@ html {
   grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 5rem;
   margin-top: 5rem;
-  min-height: calc(100vh - 20rem);
+  min-height: calc(100vh - 30rem);
 }
 
 .dropdown-container img {
