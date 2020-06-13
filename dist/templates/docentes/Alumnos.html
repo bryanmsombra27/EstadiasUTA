@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="../../css/spiners.css">
+    <link rel="stylesheet" href="../../css/registros.css">
     <link rel="stylesheet" href="../../css/Tablas.css">
-    <script src="../../js/alumnosPrueba.js" async></script>
+
+    <script src="../../js/alumnosPrueba.js" defer></script>
 </head>
+
 <body>
     <header class="header">
         <div class="header-container">
@@ -22,7 +26,7 @@
             </div>
     </header>
 
-    <section class="table-container container">
+    <section class="table-container container" id="table__button">
         <table class="table__size" id="datatable">
             <thead class="table__header">
                 <tr class="table__row">
@@ -36,7 +40,9 @@
                 </tr>
             </thead>
             <tbody class="table__content" id="alumnos">
-             <!-- <tr class="table__row2">
+                <!-- <div class="lds-dual-ring"></div> -->
+
+                <!-- <tr class="table__row2">
                     <td class="table__item">201804004</td>
                     <td class="table__item">Alvarado</td>
                     <td class="table__item">Sandoval</td>
@@ -86,9 +92,10 @@
 
 
             </tbody>
+
         </table>
 
-        <a href="../panelControlDocentes.html" class="table__button">Panel de Control</a>
+        <!-- <a href="../panelControlDocentes.html" class="table__button">Panel de Control</a> -->
 
     </section>
 
@@ -98,21 +105,18 @@
             <p>Desarrollado por: Koso 2020 &copy;</p>
         </div>
     </footer>
-          <script>
+    <script>
         function ventanaSecundaria(URL) {
             window.open(URL, "ventana1", "width=600,height=600", "scrollbars=NO");
         }
     </script>
     <script src="../../js/Jquery.js"></script>
-    <script type="text/javascript" src="../../js/dataTables.js" ></script>
-    <script type="text/javascript">
-      
-     
-    </script>
+    <script type="text/javascript" src="../../js/dataTables.js"></script>
 
-  
 
-  
+
+
+
 
 
 </body>

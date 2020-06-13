@@ -394,12 +394,37 @@ a.table__item--delete.button__extra-size--delete {
   color: #1ebe40;
 }
 
+@media (max-width: 900px) {
+  .table-container {
+    margin: 4rem 2rem;
+  }
+
+  .table__item--delete {
+    margin: 1rem auto;
+  }
+
+  .table__button {
+    width: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .evaluate-container {
     min-height: calc(100vh - 26.6rem);
     overflow: hidden;
 
   }
+}
+
+@media (max-width: 600px) {
+  .table-container {
+    margin: 4rem 2rem;
+  }
+
+  .table__item--delete {
+    margin: 1rem auto;
+  }
+
 }
 
 /*# sourceMappingURL=CarrerasRegistradas.css.map */

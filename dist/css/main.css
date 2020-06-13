@@ -146,4 +146,55 @@ html {
   font-weight: 400;
 }
 
+MEDIA QUERIES @media (max-width: 900px) {
+  .content {
+    margin: 2rem 3rem;
+  }
+
+  .content__menu a img {
+    max-width: 25%;
+  }
+
+  .header__img-container a img {
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+  }
+
+  .header__text-container h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    row-gap: 15rem;
+    margin-bottom: 35rem;
+  }
+
+  .content__menu a img {
+    max-width: 20%;
+  }
+
+  .header__img-container a img {
+    display: block;
+    margin: 0 auto;
+    width: 30%;
+  }
+
+  .header__text-container h1 {
+    font-size: 2.5rem;
+  }
+
+  .header__text-container {
+    margin: 0 auto;
+    display: block;
+    flex-basis: 80%;
+  }
+}
+
+
+
+
+
 /*# sourceMappingURL=main.css.map */

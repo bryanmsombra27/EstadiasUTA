@@ -282,6 +282,9 @@ html {
 .card-title p.active::after {
   -webkit-transform: rotate(-90deg) scale(0.5, 1);
   transform: rotate(-90deg) scale(0.5, 1);
+  -moz-transform: rotate(-90deg) scale(0.5, 1);
+  -ms-transform: rotate(-90deg) scale(0.5, 1);
+  -o-transform: rotate(-90deg) scale(0.5, 1);
 }
 
 .docentes__button {
@@ -308,5 +311,24 @@ html {
   color: red;
   background-color: #fff;
 }
+
+/*MEDIA QUERIES*/
+@media (max-width: 900px) {
+  .dropdown-container {
+    margin: 5rem;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .dropdown-container {
+    margin: 5rem;
+  }
+
+  .header__text-container h1 {
+    font-size: 2rem;
+  }
+}
+
 
 /*# sourceMappingURL=PanelControlEscolares.css.map */

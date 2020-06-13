@@ -1,11 +1,32 @@
+ //DOM Queries
  const impreso = document.querySelector('#alumnos');
+ const PanelControlBtn = document.getElementById('table__button');
 
-  const koso = async () => {
-      const res = await fetch('http://localhost/koso/koso.php');
-      const data = await res.json();
+ //function Expression
+ const PanelControlButton = () => {
+     const a = document.createElement('a');
+     a.classList.add('table__button');
+     a.textContent = 'Panel de control';
+     a.href = "../panelControlDocentes.html";
 
-      data.forEach((alumno, index) => {
-          impreso.innerHTML += `
+     PanelControlBtn.append(a);
+ };
+ const spiner = () => {
+     const div = document.createElement('div');
+     div.classList.add('lds-dual-ring');
+     impreso.append(div);
+ };
+
+ function paginacion() {
+     $('#datatable').DataTable();
+ }
+
+ const koso = async () => {
+     const res = await fetch('http://localhost/koso/koso.php');
+     const data = await res.json();
+
+     data.forEach((alumno, index) => {
+         impreso.innerHTML += `
               <tr class="table__row2">
                       <td class="table__item">${alumno.matricula}</td>
                       <td class="table__item">${alumno.ap_paterno}</td>
@@ -22,13 +43,11 @@
                       </td>
                   </tr>
       `;
-      });
-paginacion();
+     });
+     paginacion();
+     PanelControlButton();
+ };
 
-  }
-  
-  function paginacion(){
-    $('#datatable').DataTable();
-}
-    
+ //Llamada de las Funciones  
+ spiner();
  koso();
