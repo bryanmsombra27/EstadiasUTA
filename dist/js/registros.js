@@ -1,4 +1,8 @@
 import {
+    routesServer,
+    routes
+} from './verificarEnviar/routes.js'
+import {
     enviarCamposValidos,
     showSuccess
 } from './verificarEnviar/enviarCamposValidos.js';
@@ -10,9 +14,13 @@ const inputs = document.querySelectorAll('.register__input');
 //Function Expression
 const enviarDatos = e => {
     e.preventDefault();
+    let url = location.href;
 
-    enviarCamposValidos(e, "http://localhost/backendsiacc/controllers/signUpDocente.php");
-
+    switch (url) {
+        case routes[0]:
+            enviarCamposValidos(e, routesServer[0]);
+            break;
+    }
 
 };
 
