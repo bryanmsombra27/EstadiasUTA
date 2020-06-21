@@ -1,5 +1,5 @@
 //DOM Queries
-const loginFormDocentes = document.getElementById("login-form");
+const loginForm = document.getElementById("login-form");
 const usuarioContainer = document.querySelector('#verify1');
 const contrasenaContainer = document.querySelector('#verify2');
 const small = document.createElement('small');
@@ -79,9 +79,17 @@ const koso = async (e) => {
     contrasenaContainer.querySelector('small').remove();
   }
 
+  if(location.href==="http://localhost/InterfacesParaEstadias/dist/templates/login/loginEscolares.html"){
+    
+  if(data[1]){
+    location.href="http://localhost/InterfacesParaEstadias/dist/templates/panelControlEscolares.html"
+  }
+  }
+  if(location.href==="http://localhost/InterfacesParaEstadias/dist/templates/login/loginDocentes.html"){
 
   if(data[1]){
     location.href = "http://localhost/InterfacesParaEstadias/dist/templates/panelControlDocentes.html";
+  }
   }
 
 
@@ -91,4 +99,4 @@ const koso = async (e) => {
 
 
 //listeners
-loginFormDocentes.addEventListener("submit", koso);
+loginForm.addEventListener("submit", koso);

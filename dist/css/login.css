@@ -159,4 +159,16 @@ html {
   object-fit: cover;
 }
 
-/*# sourceMappingURL=login.css.map */
+.form__caja-input--input-1.error,
+.form__caja-input--input-2.error{
+  border-bottom: .3rem solid rgba(233, 8, 8, 0.8);
+
+}
+.form-error {
+  display: block;
+  font-size: 1.3rem;
+  margin: 1rem 0;
+  color: red;
+  font-weight: bold;
+  font-family: sans-serif;
+}

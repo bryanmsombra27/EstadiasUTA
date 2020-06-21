@@ -134,10 +134,10 @@ html {
   border: 0.1rem solid #1d8aa5;
   cursor: pointer;
   transition: 0.5s ease-in-out;
-  -webkit-transition: ;
-  -moz-transition: ;
-  -ms-transition: ;
-  -o-transition: ;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
 }
 
 .register__buttons--1:hover {
@@ -158,10 +158,10 @@ html {
   border: 0.1rem solid red;
   cursor: pointer;
   transition: 0.5s ease-in-out;
-  -webkit-transition: ;
-  -moz-transition: ;
-  -ms-transition: ;
-  -o-transition: ;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
 }
 
 .register__buttons--2:hover {
@@ -181,10 +181,10 @@ html {
   -ms-border-radius: 0.5rem;
   -o-border-radius: 0.5rem;
   transition: 0.5s ease-in-out;
-  -webkit-transition: ;
-  -moz-transition: ;
-  -ms-transition: ;
-  -o-transition: ;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
 }
 
 .register__image {
@@ -220,10 +220,10 @@ html {
   border: 0.1rem solid #019966;
   cursor: pointer;
   transition: 0.5s ease-in-out;
-  -webkit-transition: ;
-  -moz-transition: ;
-  -ms-transition: ;
-  -o-transition: ;
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -ms-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
 }
 
 .register__input--submit:hover {
@@ -271,10 +271,10 @@ html {
   -o-border-radius: .5rem;
   text-decoration: none;
   transition: .5s ease-in-out;
-  -webkit-transition: ;
-  -moz-transition: ;
-  -ms-transition: ;
-  -o-transition: ;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
 }
 
 .flex .input__consultar-profesor:hover {
@@ -319,6 +319,42 @@ html {
   margin-bottom: 8rem;
 }
 
+/*VALIDACIONES*/
+.register__input.input-error {
+  border: .1rem solid red
+}
+
+.small-error {
+  color: red;
+  font-size: 1.3rem;
+  margin-top: .5rem;
+  text-align: center;
+  transition: .5s ease-in-out;
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -ms-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  animation: error .3s linear;
+  -webkit-animation: error .3s linear;
+}
+
+/*animacion de error*/
+@keyframes error {
+
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+
+
+}
+
+
+
+
 /*MEDIA QUERIES*/
 @media (max-width: 900px) {
   .register-field {
@@ -356,5 +392,3 @@ html {
     font-size: 2.3rem;
   }
 }
-
-/*# sourceMappingURL=registroMaterias.css.map */
