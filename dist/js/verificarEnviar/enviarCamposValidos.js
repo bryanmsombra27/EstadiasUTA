@@ -126,55 +126,64 @@ const enviarCamposValidos = async (e, url) => {
         "refescuela",
         "nivel",
     ];
-    // const valores = [apellidoP.value, apellidoM.value, nombre.value, domicilio.value, colonia.value, ciudad.value, estado.value, cp.value, telefono.value, celular.value, email.value, sexo.value, rfc.value, curp.value, cedula.value, fecha_ing.value, rol.value, inf_academ.value, pass.value, pass2.value, plantel.value, nivel.value];
+    if (pass.value.trim() === pass2.value.trim()) {
 
-    // let formData = new FormData();
+        const data = await enviarDatosServer(
+            llavesDinamicas,
+            url,
+            apellidoP.value,
+            apellidoM.value,
+            nombre.value,
+            domicilio.value,
+            colonia.value,
+            ciudad.value,
+            estado.value,
+            cp.value,
+            telefono.value,
+            celular.value,
+            email.value,
+            sexo.value,
+            rfc.value,
+            curp.value,
+            cedula.value,
+            fecha_ing.value,
+            rol.value,
+            inf_academ.value,
+            pass.value,
+            pass2.value,
+            plantel.value,
+            nivel.value
+        );
 
-    // valores.forEach((campo, index) => formData.append(llavesDinamicas[index], campo));
-    // const res = await fetch("http://localhost/backendsiacc/controllers/signUpDocente.php", {
-    //     method: "POST",
-    //     body: formData
-    // });
+        if (data.msg) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'El correo ya esta registrado!, por favor intente con otro correo',
 
-    // console.log(res);
-    // const data = await res.json();
+            })
+        }
+        if (data.exito) {
+            //colocar un sweet alert y fuga
+            Swal.fire(
+                'Usuario Registrado!',
+                'El Docente ha sido Registrado con exito!',
+                'success'
+            )
+            e.target.reset();
+        }
 
-    const data = await enviarDatosServer(
-        llavesDinamicas,
-        url,
-        apellidoP.value,
-        apellidoM.value,
-        nombre.value,
-        domicilio.value,
-        colonia.value,
-        ciudad.value,
-        estado.value,
-        cp.value,
-        telefono.value,
-        celular.value,
-        email.value,
-        sexo.value,
-        rfc.value,
-        curp.value,
-        cedula.value,
-        fecha_ing.value,
-        rol.value,
-        inf_academ.value,
-        pass.value,
-        pass2.value,
-        plantel.value,
-        nivel.value
-    );
+    } else {
 
-    if (data.exito) {
-        //colocar un sweet alert y fuga
-        Swal.fire(
-            'Usuario Registrado!',
-            'El Docente ha sido Registrado con exito!',
-            'success'
-        )
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Las contraseñas no coinciden!, por favor intente nuevamente',
+
+        })
+        return;
     }
-    e.target.reset();
+
 };
 export {
     enviarCamposValidos,

@@ -15,7 +15,7 @@ const mensajesLogin = (mensaje) => {
 //function expression
 const koso = async (e) => {
   e.preventDefault();
-    let datos = new FormData();
+  let datos = new FormData();
 
   const email = e.target.email;
   const pass = e.target.pass;
@@ -40,17 +40,17 @@ const koso = async (e) => {
   // }
 
   datos.append("email", email.value);
-   datos.append("pass", pass.value);
+  datos.append("pass", pass.value);
 
-  const res = await fetch("http://localhost/backendsiacc/controllers/loginDocentes.php",{
+  const res = await fetch("http://localhost/backendsiacc/controllers/loginDocentes.php", {
 
-      method: "POST",
-      body: datos
-        });
+    method: "POST",
+    body: datos
+  });
 
   const data = await res.json();
-      
-  if(data.email){
+
+  if (data.email) {
 
     small.textContent = data.email;
     const mensaje = mensajesLogin(data.email);
@@ -60,8 +60,7 @@ const koso = async (e) => {
     // console.log(data.email);
     return;
 
-  }   
-  else if(data.password){
+  } else if (data.password) {
     small.textContent = data.password;
     const mensaje = mensajesLogin(data.password);
     pass.classList.add('error');
@@ -71,25 +70,26 @@ const koso = async (e) => {
     return;
   }
 
-  if(email.classList.contains('error')){
+  if (email.classList.contains('error')) {
     email.classList.remove('error');
     usuarioContainer.querySelector('small').remove();
-  }else if(pass.classList.contains('error')){
+  } else if (pass.classList.contains('error')) {
     pass.classList.remove('error');
     contrasenaContainer.querySelector('small').remove();
   }
 
-  if(location.href==="http://localhost/InterfacesParaEstadias/dist/templates/login/loginEscolares.html"){
-    
-  if(data[1]){
-    location.href="http://localhost/InterfacesParaEstadias/dist/templates/panelControlEscolares.html"
-  }
-  }
-  if(location.href==="http://localhost/InterfacesParaEstadias/dist/templates/login/loginDocentes.html"){
 
-  if(data[1]){
-    location.href = "http://localhost/InterfacesParaEstadias/dist/templates/panelControlDocentes.html";
+  if (location.href === "http://localhost/InterfacesParaEstadias/dist/templates/login/loginEscolares.html") {
+
+    if (data[1]) {
+      location.href = "http://localhost/InterfacesParaEstadias/dist/templates/panelControlEscolares.html"
+    }
   }
+  if (location.href === "http://localhost/InterfacesParaEstadias/dist/templates/login/loginDocentes.html") {
+
+    if (data[1]) {
+      location.href = "http://localhost/InterfacesParaEstadias/dist/templates/panelControlDocentes.html";
+    }
   }
 
 
