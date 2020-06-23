@@ -5,12 +5,13 @@ import {
 import {
     spiner,
     alumnos,
-    docentes
+    docentes,
+    carreras
 } from './verificarEnviar/peticiones.js';
 
 let url = location.href;
 
-//Llamada de las Funcione
+//Llamada de las Funciones
 switch (url) {
     case `${routeRequest[0]}`:
         spiner();
@@ -19,5 +20,13 @@ switch (url) {
     case `${routeRequest[1]}`:
         spiner();
         docentes(routesServerRequest[1]);
+        break;
+    case `${routeRequest[2]}`:
+        spiner();
+        docentes(routesServerRequest[1]);
+        break;
+    case `${routeRequest[3]}`:
+        spiner();
+        carreras(routesServerRequest[2]);
         break;
 }

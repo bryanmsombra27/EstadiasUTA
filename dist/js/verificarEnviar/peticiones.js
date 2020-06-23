@@ -1,8 +1,18 @@
 //DOM Queries
 const impreso = document.querySelector('#tabla'); //la tabla donde se imprimiran los datos
 const PanelControlBtn = document.getElementById('table__button'); //añadir el boton hasta el final de la tabla
+
 //function Expression
 const PanelControlButton = () => {
+    const a = document.createElement('a');
+    a.classList.add('table__button');
+    a.textContent = 'Panel de control';
+    a.href = "../panelControlEscolares.html";
+
+    PanelControlBtn.append(a);
+};
+
+const PanelControlButton2 = () => {
     const a = document.createElement('a');
     a.classList.add('table__button');
     a.textContent = 'Panel de control';
@@ -10,11 +20,13 @@ const PanelControlButton = () => {
 
     PanelControlBtn.append(a);
 };
+
 const spiner = () => {
     const div = document.createElement('div');
     div.classList.add('lds-dual-ring');
     impreso.append(div);
 };
+
 const detenerSpiner = () => {
     const spin = document.querySelector('.lds-dual-ring');
     spin.style.display = "none";
@@ -48,7 +60,7 @@ const alumnos = async (url) => {
       `;
     });
     paginacion();
-    PanelControlButton();
+    PanelControlButton2();
 };
 
 const docentes = async (url) => {
@@ -73,8 +85,31 @@ const docentes = async (url) => {
     PanelControlButton();
 };
 
+const carreras = async (url) => {
+    const res = await fetch(url);
+    const data = await res.json();
+
+    const carrerasEl = data[1];
+
+    carrerasEl.forEach(carrera => {
+        impreso.innerHTML += `
+                   <tr class="table__row2">
+                           <td class="table__item">${carrera.clave}</td>
+                           <td class="table__item">${carrera.carrera}</td>
+                           <td class="table__item">${carrera.plan}</td>
+                           <td class="table__item--actions flex">
+                             <a href="#" class="table__item--modify">Modificar</a>
+                             <a href="#" class="table__item--delete">Eliminar</a>
+                         </td>
+           `;
+    })
+    paginacion(); //paginacion solo sirve para cuando hay demasiados registros con registros minimos no funciona del todo
+
+}
+
 export {
     spiner,
     alumnos,
-    docentes
+    docentes,
+    carreras
 };

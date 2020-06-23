@@ -12,6 +12,7 @@ const showError = (input, mensaje, index) => {
         inputsContainers[index].append(small);
     }
 };
+
 //si el campo ya no esta vacio elimina el mensaje de error
 const showSuccess = (input, index) => {
     input.classList.remove("input-error");
@@ -21,6 +22,7 @@ const showSuccess = (input, index) => {
         inputsContainers[index].querySelector("small").remove();
     }
 };
+
 //validando los campos vacios
 const CamposVacios = (...arregloInputs) => {
     let vacios = 0;
@@ -34,6 +36,7 @@ const CamposVacios = (...arregloInputs) => {
     });
     return vacios;
 };
+
 const enviarDatosServer = async (llaves, url, ...arregloCampos) => {
     let formData = new FormData();
 
