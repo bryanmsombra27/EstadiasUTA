@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../css/registros.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="../../js/registros.js" defer type="module"></script>
 
 </head>
 
@@ -23,17 +25,17 @@
     </header>
 
     <section class="register-career container">
-        <form action="#" class="register__form">
+        <form action="#" class="register__form" id="register-form">
 
             <div class="register-field">
                 <div class="input-container">
-                    <label class="register-label" for="apellidoP">Estatus</label>
-                    <input class="register__input" type="text" id="apellidoP">
+                    <label class="register-label" for="estatus">Estatus</label>
+                    <input class="register__input" type="text" id="estatus" name="estatus">
                 </div>
 
                 <div class="input-container">
-                    <label class="register-label" for="apellidoM">Descripción</label>
-                    <input class="register__input" type="text" id="apellidoM">
+                    <label class="register-label" for="descripcion">Descripción</label>
+                    <input class="register__input" type="text" id="descripcion" name="descripcion">
                 </div>
             </div>
 

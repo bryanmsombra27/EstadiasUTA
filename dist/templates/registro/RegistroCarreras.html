@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../css/registros.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="../../js/registros.js" defer type="module"></script>
 
 </head>
 
@@ -23,40 +25,35 @@
     </header>
 
     <section class="register-career container">
-        <form action="#" class="register__form">
+        <form action="#" class="register__form" id="register-form">
             <div class="register-field">
                 <div class="input-container">
-                    <label class="register-label" for="numeroE">Clave Carrera</label>
-                    <input class="register__input" type="number" id="numeroE">
+                    <label class="register-label" for="clave">Clave Carrera</label>
+                    <input class="register__input" type="number" id="clave" name="clave">
+                </div>
+
+                <div class="input-container">
+                    <label class="register-label" for="plan">Plan</label>
+                    <input class="register__input" type="text" id="plan" name="plan">
                 </div>
             </div>
 
-
-
             <div class="register-field">
                 <div class="input-container">
-                    <label class="register-label" for="apellidoP">Carrera</label>
-                    <input class="register__input" type="text" id="apellidoP">
-                </div>
-
-                <div class="input-container">
-                    <label class="register-label" for="apellidoM">Plan</label>
-                    <input class="register__input" type="text" id="apellidoM">
-                </div>
-
-                <div class="input-container">
-                    <label class="register-label" for="nombre">Numero de Materias Correspondientes</label>
-                    <input class="register__input" type="number" name="" id="nombre">
+                    <label class="register-label" for="carrera">Carrera</label>
+                    <input class="register__input" type="text" id="carrera" name="carrera">
                 </div>
             </div>
 
-
-
             <div class="register-field">
                 <div class="input-container">
-                    <label class="register-label" for="universidad">Universidad</label>
-                    <select name="universidad" id="" class="register__input">
-                        <option value="uta">Universidad Tecnologica de Acapulco</option>
+                    <label class="register-label" for="num_materias">Numero de Materias Correspondientes</label>
+                    <input class="register__input" type="number" name="num_materias" id="num_materias">
+                </div>
+                <div class="input-container">
+                    <label class="register-label" for="ref_escuela">Universidad</label>
+                    <select name="ref_escuela" id="ref_escuela" class="register__input">
+                        <option value="UNIVERSIDAD TECNOLOGICA DE ACAPULCO">Universidad Tecnológica de Acapulco</option>
                     </select>
                 </div>
             </div>
@@ -78,6 +75,7 @@
             <p>Desarrollado por: Koso 2020 &copy;</p>
         </div>
     </footer>
+
 
 </body>
 

@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../css/registros.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="../../js/registros.js" defer type="module"></script>
+
 
 </head>
 
@@ -23,16 +26,16 @@
     </header>
 
     <section class="register-career container">
-        <form action="#" class="register__form">
+        <form action="#" class="register__form" id="register-form">
 
-            <div class="input-container">
+            <div class="input-container ">
                 <label class="register-label" for="motivo">Motivo</label>
-                <input class="register__input bottom" type="text" id="motivo">
+                <textarea class="register__input " type="text" id="motivo"></textarea>
             </div>
 
 
 
-            <input class="register__input--submit" type="submit" value="Registrar">
+            <input class="register__input--submit top" type="submit" value="Registrar">
         </form>
         <div class="register__buttons">
             <a href="../panelControlEscolares.html" class="register__buttons--1">Panel de control</a>

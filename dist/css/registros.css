@@ -338,6 +338,21 @@ html {
   -webkit-animation: error .3s linear;
 }
 
+.top {
+  margin-top: 5rem;
+}
+
+textarea {
+  resize: none;
+  line-height: 2.5rem;
+  height: 20rem;
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+  -moz-appearance: textfield;
+}
+
 /*animacion de error*/
 @keyframes error {
 

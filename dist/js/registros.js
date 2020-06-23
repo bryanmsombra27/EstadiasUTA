@@ -5,7 +5,13 @@ import {
 import {
     enviarCamposValidos,
     showSuccess,
-    registroPlantel
+    registroPlantel,
+    registroEstatus,
+    registroMotivoBaja,
+    registroCarreras,
+    registroMaterias,
+    registroModalidades,
+    registroNiveles
 } from './verificarEnviar/enviarCamposValidos.js';
 
 ///DOM Queries
@@ -24,7 +30,24 @@ const enviarDatos = e => {
             break;
         case `${routes[1]}`:
             registroPlantel(e, routesServer[1]);
-
+            break;
+        case `${routes[2]}`:
+            registroEstatus(e, routesServer[2]);
+            break;
+        case `${routes[3]}`:
+            registroMotivoBaja(e, routesServer[3]);
+            break;
+        case `${routes[4]}`:
+            registroCarreras(e, routesServer[4]);
+            break;
+        case `${routes[5]}`:
+            registroMaterias(e, routesServer[5]);
+            break;
+        case `${routes[6]}`:
+            registroModalidades(e, routesServer[6]);
+            break;
+        case `${routes[7]}`:
+            registroNiveles(e, routesServer[7]);
             break;
     }
 

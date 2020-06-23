@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="../../css/registros.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+    <script src="../../js/registros.js" defer type="module"></script>
+
 </head>
 
 <body>
@@ -22,56 +25,60 @@
     </header>
 
     <section class="register-career container">
-        <form action="#" class="register__form">
+        <form action="#" class="register__form" id="register-form">
             <div class="register-field">
                 <div class="input-container">
-                    <label class="register-label" for="clave">Plantel</label>
-                    <select name="" id="" class="register__input">
-                        <option value="uta">Universidad Tecnologica de Acapulco</option>
+                    <label class="register-label" for="ref_escuela">Plantel</label>
+                    <select name="ref_escuela" id="ref_escuela" class="register__input">
+                        <option value="UNIVERSIDAD TECNOLOGICA DE ACAPULCO">Universidad Tecnologica de Acapulco</option>
                     </select>
                 </div>
 
                 <div class="input-container">
-                    <label class="register-label" for="plantel">Modalidad</label>
-                    <select name="" id="" class="register__input">
+                    <label class="register-label" for="refmodalidad">Modalidad</label>
+                    <!-- <select name="" id="" class="register__input">
                         <option value="uta">Tecnico Superior Universitario</option>
-                    </select>
+                    </select> -->
+                    <input type="text" class="register__input" id="refmodalidad" name="refmodalidad">
                 </div>
 
             </div>
 
             <div class="register-field">
                 <div class="input-container">
-                    <label class="register-label" for="director">Carrera</label>
-                    <select name="" id="" class="register__input">
+                    <label class="register-label" for="ref_carrera">Carrera</label>
+                    <!-- <select name="" id="" class="register__input">
                         <option value="uta">09DNM Desarrollo de Negocios Area Mercadotecnia</option>
-                    </select>
+                    </select> -->
+                    <input type="text" class="register__input" id="ref_carrera" name="ref_carrera">
                 </div>
                 <div class="input-container">
-                    <label class="register-label" for="direccion">Nivel</label>
-                    <select name="" id="" class="register__input">
+                    <label class="register-label" for="nivel">Nivel</label>
+                    <!-- <select name="" id="" class="register__input">
                         <option value="uta">Primero</option>
-                    </select>
+                    </select> -->
+                    <input type="text" class="register__input" id="nivel" name="nivel">
+
                 </div>
 
             </div>
             <div class="register-field">
                 <div class="input-container">
                     <label class="register-label" for="cm">Clave de la Materia</label>
-                    <input class="register__input" type="text" name="" id="cm">
+                    <input class="register__input" type="text" name="clave" id="clave">
 
                 </div>
                 <div class="input-container">
-                    <label class="register-label" for="estado">Materia</label>
-                    <input class="register__input" type="text" name="" id="estado">
+                    <label class="register-label" for="materia">Materia</label>
+                    <input class="register__input" type="text" name="materia" id="materia">
                 </div>
 
             </div>
 
             <div class="register-field">
                 <div class="input-container">
-                    <label class="register-label" for="telefono">Numero de horas</label>
-                    <input class="register__input" type="number" name="" id="telefono">
+                    <label class="register-label" for="horas">Numero de horas</label>
+                    <input class="register__input" type="number" name="horas" id="horas">
                 </div>
 
 

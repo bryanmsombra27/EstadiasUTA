@@ -5,7 +5,6 @@ const showError = (input, mensaje, index) => {
     if (
         !inputsContainers[index].lastElementChild.classList.contains("small-error")
     ) {
-        console.log(index)
         const small = document.createElement("small");
         small.classList.add("small-error");
         small.textContent = mensaje;
@@ -60,7 +59,8 @@ const fetchGet = async (url) => {
     return data;
 };
 
-//recogiendo los valores del formulario
+//recogiendo los valores del formulario 
+//REGISTRO DOCENTES
 const enviarCamposValidos = async (e, url) => {
     const apellidoP = e.target.apellidoP;
     const apellidoM = e.target.apellidoM;
@@ -195,7 +195,7 @@ const enviarCamposValidos = async (e, url) => {
     }
 
 };
-///REGISTRO DOCENTES
+///REGISTRO PLANTEL
 const registroPlantel = async (e, url) => {
     const clave = e.target.clave;
     const nombre = e.target.nombre;
@@ -215,7 +215,6 @@ const registroPlantel = async (e, url) => {
         telefono,
         turno
     );
-    console.log(nulos)
 
     if (nulos > 0) {
         return;
@@ -253,22 +252,229 @@ const registroPlantel = async (e, url) => {
         )
         e.target.reset();
     }
-
-
-
-
 }
+//REGISTRO ALTA STATUS
+const registroEstatus = async (e, url) => {
+    const estatus = e.target.estatus;
+    const descripcion = e.target.descripcion;
 
+    let nulos = CamposVacios(estatus, descripcion);
+    if (nulos > 0) {
+        return;
+    }
+    const llavesDinamicas = ["estatus", "descripcion"];
 
+    const data = await enviarDatosServer(
+        llavesDinamicas,
+        url,
+        estatus.value,
+        descripcion.value,
+    );
+    console.log(data);
+    if (data.exito) {
+        //colocar un sweet alert y fuga
+        Swal.fire(
+            'Estatus Registrado!',
+            'El estatus del alumno ha sido Registrado con exito!',
+            'success'
+        )
+        e.target.reset();
+    }
+}
+//REGISTRO MOTIVOS DE BAJA
+const registroMotivoBaja = async (e, url) => {
+    const motivo = e.target.motivo;
 
+    let nulos = CamposVacios(motivo);
+    console.log(nulos)
 
+    if (nulos > 0) {
+        return;
+    }
+    const llavesDinamicas = ["motivo"];
 
+    const data = await enviarDatosServer(
+        llavesDinamicas,
+        url,
+        motivo.value
+    );
+    console.log(data);
+    if (data.exito) {
+        //colocar un sweet alert y fuga
+        Swal.fire(
+            'Motivo Registrado!',
+            'El motivo de baja del alumno ha sido Registrado con exito!',
+            'success'
+        )
+        e.target.reset();
+    }
+}
+///REGISTRO CARRERAS
+const registroCarreras = async (e, url) => {
+    const clave = e.target.clave;
+    const plan = e.target.plan;
+    const carrera = e.target.carrera;
+    const num_materias = e.target.num_materias;
+    const ref_escuela = e.target.ref_escuela;
 
+    let nulos = CamposVacios(
+        clave,
+        plan,
+        carrera,
+        num_materias,
+        ref_escuela);
 
+    if (nulos > 0) {
+        return;
+    }
+    const llavesDinamicas = [
+        "clave",
+        "plan",
+        "carrera",
+        "num_materias",
+        "ref_escuela"
+    ];
 
+    const data = await enviarDatosServer(
+        llavesDinamicas,
+        url,
+        clave.value,
+        plan.value,
+        carrera.value,
+        num_materias.value,
+        ref_escuela.value);
+
+    console.log(data);
+    if (data.exito) {
+        //colocar un sweet alert y fuga
+        Swal.fire(
+            'Carrera Registrada!',
+            'La Carrera  ha sido Registrado con exito!',
+            'success'
+        )
+        e.target.reset();
+    }
+}
+///REGISTRO MATERIAS
+const registroMaterias = async (e, url) => {
+    const ref_escuela = e.target.ref_escuela;
+    const refmodalidad = e.target.refmodalidad;
+    const ref_carrera = e.target.ref_carrera;
+    const nivel = e.target.nivel;
+    const clave = e.target.clave;
+    const materia = e.target.materia;
+    const horas = e.target.horas;
+
+    let nulos = CamposVacios(
+        ref_escuela,
+        refmodalidad,
+        ref_carrera,
+        nivel,
+        clave,
+        materia,
+        horas);
+
+    if (nulos > 0) {
+        return;
+    }
+    const llavesDinamicas = [
+        "ref_escuela",
+        "refmodalidad",
+        "ref_carrera",
+        "nivel",
+        "clave",
+        "materia",
+        "horas"
+    ];
+
+    const data = await enviarDatosServer(
+        llavesDinamicas,
+        url,
+        ref_escuela.value,
+        refmodalidad.value,
+        ref_carrera.value,
+        nivel.value,
+        clave.value,
+        materia.value,
+        horas.value);
+
+    console.log(data);
+    if (data.exito) {
+        //colocar un sweet alert y fuga
+        Swal.fire(
+            'Materia Registrada!',
+            'La Materia  ha sido Registrado con exito!',
+            'success'
+        )
+        e.target.reset();
+    }
+}
+//REGISTRO MODALIDADES
+const registroModalidades = async (e, url) => {
+    const clave = e.target.clave;
+    const nombre = e.target.nombre;
+
+    let nulos = CamposVacios(clave, nombre);
+    if (nulos > 0) {
+        return;
+    }
+    const llavesDinamicas = ["clave", "nombre"];
+
+    const data = await enviarDatosServer(
+        llavesDinamicas,
+        url,
+        clave.value,
+        nombre.value
+    );
+    console.log(data);
+    if (data.exito) {
+        //colocar un sweet alert y fuga
+        Swal.fire(
+            'Modalidad Registrada!',
+            'La nueva modalidad ha sido Registrado con exito!',
+            'success'
+        )
+        e.target.reset();
+    }
+}
+//REGISTRO NIVELES
+const registroNiveles = async (e, url) => {
+    const nivel = e.target.nivel;
+    const descripcion = e.target.descripcion;
+
+    // let nulos = CamposVacios(nivel, descripcion);
+    let nulos = CamposVacios(nivel);
+    if (nulos > 0) {
+        return;
+    }
+    const llavesDinamicas = ["nivel", "descripcion"];
+
+    const data = await enviarDatosServer(
+        llavesDinamicas,
+        url,
+        nivel.value,
+        descripcion.value
+    );
+    console.log(data);
+    if (data.exito) {
+        //colocar un sweet alert y fuga
+        Swal.fire(
+            'Nivel Registrado!',
+            'Nuevo nivel ha sido Registrado con exito!',
+            'success'
+        )
+        e.target.reset();
+    }
+}
 
 export {
     enviarCamposValidos,
     showSuccess,
-    registroPlantel
+    registroPlantel,
+    registroEstatus,
+    registroMotivoBaja,
+    registroCarreras,
+    registroMaterias,
+    registroModalidades,
+    registroNiveles
 };
