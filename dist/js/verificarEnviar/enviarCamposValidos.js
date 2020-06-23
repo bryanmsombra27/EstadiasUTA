@@ -5,6 +5,7 @@ const showError = (input, mensaje, index) => {
     if (
         !inputsContainers[index].lastElementChild.classList.contains("small-error")
     ) {
+        console.log(index)
         const small = document.createElement("small");
         small.classList.add("small-error");
         small.textContent = mensaje;
@@ -48,6 +49,12 @@ const enviarDatosServer = async (llaves, url, ...arregloCampos) => {
         method: "POST",
         body: formData,
     });
+    const data = await res.json();
+
+    return data;
+};
+const fetchGet = async (url) => {
+    const res = await fetch(url);
     const data = await res.json();
 
     return data;
@@ -188,7 +195,80 @@ const enviarCamposValidos = async (e, url) => {
     }
 
 };
+///REGISTRO DOCENTES
+const registroPlantel = async (e, url) => {
+    const clave = e.target.clave;
+    const nombre = e.target.nombre;
+    const director = e.target.director;
+    const direccion = e.target.direccion;
+    const ciudad = e.target.ciudad;
+    const estado = e.target.estado;
+    const telefono = e.target.telefono;
+    const turno = e.target.turno;
+    let nulos = CamposVacios(
+        clave,
+        nombre,
+        director,
+        direccion,
+        ciudad,
+        estado,
+        telefono,
+        turno
+    );
+    console.log(nulos)
+
+    if (nulos > 0) {
+        return;
+    }
+    const llavesDinamicas = [
+        "clave",
+        "nombre",
+        "director",
+        "direccion",
+        "ciudad",
+        "estado",
+        "telefono",
+        "turno"
+    ];
+
+    const data = await enviarDatosServer(
+        llavesDinamicas,
+        url,
+        clave.value,
+        nombre.value,
+        director.value,
+        ciudad.value,
+        estado.value,
+        telefono.value,
+        direccion.value,
+        turno.value
+    );
+    console.log(data);
+    if (data.exito) {
+        //colocar un sweet alert y fuga
+        Swal.fire(
+            'Plantel Registrado!',
+            'El Plantel ha sido Registrado con exito!',
+            'success'
+        )
+        e.target.reset();
+    }
+
+
+
+
+}
+
+
+
+
+
+
+
+
+
 export {
     enviarCamposValidos,
-    showSuccess
+    showSuccess,
+    registroPlantel
 };

@@ -1,6 +1,12 @@
 //Peticiones POST
-const routesServer = ["http://localhost/backendsiacc/controllers/signUpDocente.php"];
-const routes = ["http://localhost/InterfacesParaEstadias/dist/templates/registro/registroDocentes.html"];
+const routesServer = [
+    "http://localhost/backendsiacc/controllers/signUpDocente.php",
+    "http://localhost/backendsiacc/controllers/regPlantel.php"
+];
+const routes = [
+    "http://localhost/InterfacesParaEstadias/dist/templates/registro/registroDocentes.html",
+    "http://localhost/InterfacesParaEstadias/dist/templates/registro/RegistroPlantel.html"
+];
 
 //Peticiones GET
 const routesServerRequest = [
