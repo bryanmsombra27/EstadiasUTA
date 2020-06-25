@@ -52,12 +52,6 @@ const enviarDatosServer = async (llaves, url, ...arregloCampos) => {
 
     return data;
 };
-const fetchGet = async (url) => {
-    const res = await fetch(url);
-    const data = await res.json();
-
-    return data;
-};
 
 //recogiendo los valores del formulario 
 //REGISTRO DOCENTES

@@ -6,9 +6,11 @@ import {
     spiner,
     alumnos,
     docentes,
-    carreras
+    carreras,
+    personal
 } from './verificarEnviar/peticiones.js';
 
+//obteniendo la url de la ubicacion actual
 let url = location.href;
 
 //Llamada de las Funciones
@@ -23,7 +25,7 @@ switch (url) {
         break;
     case `${routeRequest[2]}`:
         spiner();
-        docentes(routesServerRequest[1]);
+        personal(routesServerRequest[1]);
         break;
     case `${routeRequest[3]}`:
         spiner();
