@@ -1,6 +1,10 @@
 import {
-    routesServerRequest
+    routesServerRequest,
+    routeUpdateServerRequest
 } from './routes.js';
+import {
+    actualizarPersonal
+} from './enviarCamposValidos.js';
 
 
 //DOM Queries
@@ -42,18 +46,20 @@ function paginacion() {
 }
 
 const popup = () => {
-    let boton = document.querySelector('#popup');
+    let botones = document.querySelectorAll('.popup2');
     let popup = document.querySelector('.popup-wrapper');
     let closePopup = document.querySelector('.popup-close');
 
-    boton.addEventListener('click', function (e) {
-        idpersonal = +e.target.dataset.personal;
-        e.preventDefault();
-        console.log(idpersonal);
+    botones.forEach(boton => {
+        boton.addEventListener('click', function (e) {
+            idpersonal = +e.target.dataset.personal;
+            e.preventDefault();
+            console.log(idpersonal);
 
-        popup.style.display = "block";
-        formPopUp(routesServerRequest[1]);
+            popup.style.display = "block";
+            formPopUp(routesServerRequest[1]);
 
+        })
     })
     closePopup.addEventListener('click', () => {
         popup.style.display = "none";
@@ -92,8 +98,11 @@ const formPopUp = (url) => {
     }).catch(err => console.log(err));
 
 
-
+    /*ENVIAR LA PETICION DE ACTULIZAR LOS DATOS DE PERSONAL */
     formPopup.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        actualizarPersonal(e, routeUpdateServerRequest[0]);
 
     });
 
@@ -146,7 +155,7 @@ const personal = (url) => {
                       <td class="table__item">${docente.ap_materno}</td>
                       <td class="table__item">${docente.nombre}</td>
                       <td class="table__item--actions">
-                        <a href="#" class="table__item--modify" id="popup" data-personal="${docente.idpersonal}">Modificar</a>
+                        <a href="#" class="table__item--modify popup2" id="popup" data-personal="${docente.idpersonal}">Modificar</a>
                         <a href="#" class="table__item--delete">Eliminar</a>
                     </td>
                

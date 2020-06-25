@@ -33,9 +33,13 @@ const routeRequest = [
     "http://localhost/InterfacesParaEstadias/dist/templates/cambios/CarrerasRegistradas.html"
 ];
 
+//PETICIONES UPDATE
+const routeUpdateServerRequest = ["http://localhost/backendsiacc/controllers/actualizarPersonal.php"];
+
 export {
     routesServer,
     routes,
     routesServerRequest,
-    routeRequest
+    routeRequest,
+    routeUpdateServerRequest
 };
