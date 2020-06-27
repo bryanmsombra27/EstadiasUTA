@@ -88,7 +88,7 @@ const koso = async (e) => {
   if (location.href === "http://localhost/InterfacesParaEstadias/dist/templates/login/loginDocentes.html") {
 
     if (data[1]) {
-      location.href = "http://localhost/InterfacesParaEstadias/dist/templates/panelControlDocentes.html";
+      location.href = "http://localhost/InterfacesParaEstadias/dist/templates/panelControlDocentes.php";
     }
   }
 
