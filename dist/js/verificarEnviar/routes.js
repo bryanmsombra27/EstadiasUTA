@@ -34,12 +34,20 @@ const routeRequest = [
 ];
 
 //PETICIONES UPDATE
-const routeUpdateServerRequest = ["http://localhost/backendsiacc/controllers/actualizarPersonal.php"];
+const routeUpdateServerRequest = [
+    "http://localhost/backendsiacc/controllers/actualizarPersonal.php",
+    "http://localhost/backendsiacc/controllers/actualizarDocente.php"
+];
+const routeUpdateRequest = [
+    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/PersonalRegistrado.html",
+    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/DocentesRegistrados.html"
+]
 
 export {
     routesServer,
     routes,
     routesServerRequest,
     routeRequest,
-    routeUpdateServerRequest
+    routeUpdateServerRequest,
+    routeUpdateRequest
 };

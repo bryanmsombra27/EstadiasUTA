@@ -97,26 +97,29 @@ const personal = (url) => {
 
     // paginacion(); paginacion solo sirve para cuando hay demasiados registros con registros minimos no funciona del todo
 };
-const docentes = async (url) => {
-    const res = await fetch(url);
-    const data = await res.json();
-
-    data.forEach((docente, index) => {
-        impreso.innerHTML += `
+const docentes = (url) => {
+    fetch(url).then(res => res.json()).then(data => {
+        console.log(data)
+        data.forEach((docente, index) => {
+            impreso.innerHTML += `
               <tr class="table__row2">
                       <td class="table__item">${docente.clave}</td>
                       <td class="table__item">${docente.ap_paterno}</td>
                       <td class="table__item">${docente.ap_materno}</td>
                       <td class="table__item">${docente.nombre}</td>
                       <td class="table__item--actions">
-                        <a href="#" class="table__item--modify">Modificar</a>
-                        <a href="#" class="table__item--delete">Eliminar</a>
+                        <a href="#" class="table__item--modify popup2" id="popup" data-id="${docente.idpersonal}">Modificar</a>
+                        <a href="#" class="table__item--delete" id="delete-popup">Eliminar</a>
                     </td>
+               
+
       `;
-    });
-    detenerSpiner();
-    // paginacion(); paginacion solo sirve para cuando hay demasiados registros con registros minimos no funciona del todo
-    PanelControlButton();
+        });
+        detenerSpiner();
+        popup();
+        PanelControlButton();
+
+    }).catch(e => console.log(e));
 };
 
 const carreras = async (url) => {
