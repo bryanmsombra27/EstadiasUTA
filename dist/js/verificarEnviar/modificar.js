@@ -23,14 +23,17 @@ const popup = () => {
             e.preventDefault();
             popup.style.display = "block";
             let url = location.href;
+            console.log(url)
 
             //crear una funcion para que dependiendo la ruta en la que se encuentre actualmente  la funcion en automatico sepa que informacion debe traer
             switch (url) {
                 case `${routeUpdateRequest[0]}`:
                     personalFormPopUp(routesServerRequest[1], id);
+                    console.log(url)
                     break;
                 case `${routeUpdateRequest[1]}`:
-                    docentesFormPopUp(routesServerRequest[1], id);
+                    docentesFormPopUp(routesServerRequest[3], id);
+                    console.log(url)
                     break;
 
             }

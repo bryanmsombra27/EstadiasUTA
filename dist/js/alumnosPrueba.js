@@ -21,7 +21,7 @@ switch (url) {
         break;
     case `${routeRequest[1]}`:
         spiner();
-        docentes(routesServerRequest[1]);
+        docentes(routesServerRequest[3]);
         break;
     case `${routeRequest[2]}`:
         spiner();

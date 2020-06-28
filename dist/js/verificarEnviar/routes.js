@@ -10,27 +10,28 @@ const routesServer = [
     "http://localhost/backendsiacc/controllers/registroNiveles.php"
 ];
 const routes = [
-    "http://localhost/InterfacesParaEstadias/dist/templates/registro/registroDocentes.html",
-    "http://localhost/InterfacesParaEstadias/dist/templates/registro/RegistroPlantel.html",
-    "http://localhost/InterfacesParaEstadias/dist/templates/registro/RegistroEstatusAlumnos.html",
-    "http://localhost/InterfacesParaEstadias/dist/templates/registro/registroMotivosBaja.html",
-    "http://localhost/InterfacesParaEstadias/dist/templates/registro/RegistroCarreras.html",
-    "http://localhost/InterfacesParaEstadias/dist/templates/registro/RegistroMaterias.html",
-    "http://localhost/InterfacesParaEstadias/dist/templates/registro/registroModalidades.html",
-    "http://localhost/InterfacesParaEstadias/dist/templates/registro/registroNiveles.html"
+    "http://localhost/InterfacesParaEstadias/dist/templates/registro/registroDocentes.php",
+    "http://localhost/InterfacesParaEstadias/dist/templates/registro/RegistroPlantel.php",
+    "http://localhost/InterfacesParaEstadias/dist/templates/registro/RegistroEstatusAlumnos.php",
+    "http://localhost/InterfacesParaEstadias/dist/templates/registro/registroMotivosBaja.php",
+    "http://localhost/InterfacesParaEstadias/dist/templates/registro/RegistroCarreras.php",
+    "http://localhost/InterfacesParaEstadias/dist/templates/registro/RegistroMaterias.php",
+    "http://localhost/InterfacesParaEstadias/dist/templates/registro/registroModalidades.php",
+    "http://localhost/InterfacesParaEstadias/dist/templates/registro/registroNiveles.php"
 ];
 
 //Peticiones GET
 const routesServerRequest = [
     "http://localhost/koso/koso.php", //De esta ruta depende la tabla de ALUMNOS
     "http://localhost/backendsiacc/controllers/traerPersonal.php",
-    "http://localhost/backendsiacc/controllers/cambiosMaterias.php"
+    "http://localhost/backendsiacc/controllers/cambiosMaterias.php",
+    "http://localhost/backendsiacc/controllers/traerDocentes.php"
 ];
 const routeRequest = [
-    "http://localhost/InterfacesParaEstadias/dist/templates/docentes/Alumnos.html",
-    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/DocentesRegistrados.html",
-    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/PersonalRegistrado.html",
-    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/CarrerasRegistradas.html"
+    "http://localhost/InterfacesParaEstadias/dist/templates/docentes/Alumnos.php",
+    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/DocentesRegistrados.php",
+    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/PersonalRegistrado.php",
+    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/CarrerasRegistradas.php"
 ];
 
 //PETICIONES UPDATE
@@ -39,8 +40,8 @@ const routeUpdateServerRequest = [
     "http://localhost/backendsiacc/controllers/actualizarDocente.php"
 ];
 const routeUpdateRequest = [
-    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/PersonalRegistrado.html",
-    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/DocentesRegistrados.html"
+    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/PersonalRegistrado.php",
+    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/DocentesRegistrados.php"
 ]
 
 export {

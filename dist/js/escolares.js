@@ -79,13 +79,13 @@ const koso = async (e) => {
   }
 
 
-  if (location.href === "http://localhost/InterfacesParaEstadias/dist/templates/login/loginEscolares.html") {
+  if (location.href === "http://localhost/InterfacesParaEstadias/dist/templates/login/loginEscolares.php") {
 
     if (data[1]) {
-      location.href = "http://localhost/InterfacesParaEstadias/dist/templates/panelControlEscolares.html"
+      location.href = "http://localhost/InterfacesParaEstadias/dist/templates/panelControlEscolares.php"
     }
   }
-  if (location.href === "http://localhost/InterfacesParaEstadias/dist/templates/login/loginDocentes.html") {
+  if (location.href === "http://localhost/InterfacesParaEstadias/dist/templates/login/loginDocentes.php") {
 
     if (data[1]) {
       location.href = "http://localhost/InterfacesParaEstadias/dist/templates/panelControlDocentes.php";

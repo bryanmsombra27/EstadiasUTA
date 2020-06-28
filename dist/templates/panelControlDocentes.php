@@ -1,8 +1,9 @@
 <?php
 session_start();
-if (isset($_SESSION['user'])) {
+// AQUI VA TODO EL HTML
+if (isset($_SESSION['user'])) : ?>
 
-?>
+
     <!DOCTYPE html>
     <html lang="en">
 
@@ -56,7 +57,7 @@ if (isset($_SESSION['user'])) {
                 </div>
 
                 <ul class="dropdown__content" id="content-1">
-                    <li class="dropdown__content--element"> <a href="docentes/GruposTutorados.html"> Consultar Kardex
+                    <li class="dropdown__content--element"> <a href="docentes/GruposTutorados.php"> Consultar Kardex
                             Grupo(s) Tutorado(s)
                         </a></li>
                     <li class="dropdown__content--element"> <a href="#"> Consultar
@@ -75,10 +76,10 @@ if (isset($_SESSION['user'])) {
                 </div>
 
                 <ul class="dropdown__content" id="content-2">
-                    <li class="dropdown__content--element"> <a href="docentes/CalificacionesExtraordinarias.html"> Captura
+                    <li class="dropdown__content--element"> <a href="docentes/CalificacionesExtraordinarias.php"> Captura
                             de Examenes
                             Extraordinarios</a></li>
-                    <li class="dropdown__content--element"> <a href="modulos/AsignacionMaterias.html"> Formato de
+                    <li class="dropdown__content--element"> <a href="modulos/AsignacionMaterias.php"> Formato de
                             Extraordinario </a>
                     </li>
 
@@ -95,7 +96,7 @@ if (isset($_SESSION['user'])) {
                 </div>
 
                 <ul class="dropdown__content" id="content-3">
-                    <li class="dropdown__content--element"> <a href="preparacionDelCuatrimestre/RegistroGeneraciones.html">Cambio Clave de Acceso </a></li>
+                    <li class="dropdown__content--element"> <a href="preparacionDelCuatrimestre/RegistroGeneraciones.php">Cambio Clave de Acceso </a></li>
                 </ul>
             </div>
             <div class="flex">
@@ -117,10 +118,10 @@ if (isset($_SESSION['user'])) {
 
     </html>
 
-    // AQUI VA TODO EL HTML
 
-<?php } else {
-    header("location:http://localhost/InterfacesParaEstadias/dist/templates/login/loginDocentes.html"); //AQUI VA DONDE REDIRECCIONAS SI NO TIENES SESION ACTIVA, LOGIN X EJEMPLO O REGISTRO
+<?php else :
+
+    header("location:http://localhost/InterfacesParaEstadias/koso.php"); //AQUI VA DONDE REDIRECCIONAS SI NO TIENES SESION ACTIVA, LOGIN X EJEMPLO O REGISTRO
     exit;
-}
+endif;
 ?>

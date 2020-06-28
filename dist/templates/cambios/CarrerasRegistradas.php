@@ -1,0 +1,85 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.21/css/jquery.dataTables.css">
+        <link rel="stylesheet" href="../../css/spiners.css">
+        <link rel="stylesheet" href="../../css/registros.css">
+        <link rel="stylesheet" href="../../css/Tablas.css">
+        <script src="../../js/alumnosPrueba.js" defer type="module"></script>
+    </head>
+
+    <body>
+        <header class="header">
+            <div class="header-container">
+                <div class="header__img-container">
+                    <a href="#">
+                        <img src="../../img/uta.png" alt="LogoUTA">
+                    </a>
+                </div>
+                <div class="header__text-container">
+                    <h1 class="title">Selección de Carga por Carrera</h1>
+                </div>
+        </header>
+
+        <section class="table-container container" id="table__button">
+            <table class="table__size" id="datatable">
+                <thead class="table__header">
+                    <tr class="table__row">
+                        <th class="table__head">Clave</th>
+                        <th class="table__head">Carrera</th>
+                        <th class="table__head">Plan</th>
+                        <th class="table__head">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody class="table__content" id="tabla">
+                    <!-- <tr class="table__row2">
+                        <td class="table__item">09DNM</td>
+                        <td class="table__item">Desarrollo de Negocios Area Mercadotecnia</td>
+                        <td class="table__item">2009</td>
+                        <td class="table__item--actions">
+                            <a href="#" class="table__item--modify">Modificar</a>
+                            <a href="#" class="table__item--delete">Eliminar</a>
+                        </td>
+                    </tr>
+
+                    <tr class="table__row2">
+                        <td class="table__item">09DNM</td>
+                        <td class="table__item">Desarrollo de Negocios Area Mercadotecnia</td>
+                        <td class="table__item">2009</td>
+                        <td class="table__item--actions">
+                            <a href="#" class="table__item--modify">Modificar</a>
+                            <a href="#" class="table__item--delete">Eliminar</a>
+                        </td>
+                    </tr>
+
+                    <tr class="table__row2">
+                        <td class="table__item">09DNM</td>
+                        <td class="table__item">Desarrollo de Negocios Area Mercadotecnia</td>
+                        <td class="table__item">2009</td>
+                        <td class="table__item--actions">
+                            <a href="#" class="table__item--modify">Modificar</a>
+                            <a href="#" class="table__item--delete">Eliminar</a>
+                        </td>
+                    </tr> -->
+
+                </tbody>
+            </table>
+
+            <!--<a href="../panelControlEscolares.php" class="table__button">Panel de Control</a> -->
+        </section>
+
+
+        <footer class="footer">
+            <div class="container">
+                <p>Desarrollado por: Koso 2020 &copy;</p>
+            </div>
+        </footer>
+        <script src="../../js/Jquery.js"></script>
+        <script type="text/javascript" src="../../js/dataTables.js"></script>
+    </body>
+
+    </html>
