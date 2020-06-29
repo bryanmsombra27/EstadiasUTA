@@ -82,7 +82,7 @@ const personal = (url) => {
                       <td class="table__item">${docente.nombre}</td>
                       <td class="table__item--actions flex">
                         <a href="#" class="table__item--modify popup2" id="popup" data-id="${docente.idpersonal}">Modificar</a>
-                        <a href="#" class="table__item--delete" id="delete-popup" >Eliminar</a>
+                        <a href="#" class="table__item--delete delete-popup" id="delete-popup" >Eliminar</a>
                     </td>
                
 

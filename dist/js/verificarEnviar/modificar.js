@@ -9,12 +9,32 @@ import {
     docentesFormPopUp
 } from './formulariosPopUp.js';
 
+const deletePersonal = async (id, url) => {
+    let formData = new FormData();
+
+    formData.append("id", id);
+
+    console.log(formData.get("id"));
+
+    // fetch(url, {
+    //         method: "POST",
+    //         body: formData
+    //     }).then(res => res.json())
+    //     .then(data => console.log(data))
+    const res = await fetch(url, {
+        method: "POST",
+        body: formData
+    })
+    const data = await res.json();
+
+    return data;
+}
 
 let id = 0;
 
 const popup = () => {
     let botones = document.querySelectorAll('.popup2');
-    const deleteBtn = document.getElementById('delete-popup');
+    const deleteBtns = document.querySelectorAll('.delete-popup');
     let popup = document.querySelector('.popup-wrapper');
     let closePopup = document.querySelector('.popup-close');
     // const deleteForm = document.querySelector('#delete-form');
@@ -45,23 +65,41 @@ const popup = () => {
         })
     })
 
-    deleteBtn.addEventListener('click', function (e) {
+    deleteBtns.forEach(deleteBtn => {
+        deleteBtn.addEventListener('click', function (e) {
 
-        e.preventDefault();
-        id = +e.target.previousElementSibling.dataset.id;
-        // id = +e.target.popup.dataset.id;
-        let formData = new FormData();
+            e.preventDefault();
+            id = +e.target.previousElementSibling.dataset.id;
+            // id = +e.target.popup.dataset.id;
+            Swal.fire({
+                title: '¿Esta Seguro de Eliminar este Personal?',
+                text: "No sera posible a este usuario volver a acceder al sistema!",
+                icon: 'warning',
+                showCancelButton: true,
+                reverseButtons: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Si, eliminalo del sistema!'
+            }).then((result) => {
+                if (result.value) {
+                    Swal.fire(
+                        'El personal ha sido Eliminado!',
+                        'se elimino el usuario correctamente.',
+                        'success'
+                    )
+                    deletePersonal(id, routeDeleteServerRequest[0]).then(
+                        data => {
+                            if (data.exito) {
+                                location.reload();
+                            }
+                        }
 
-        formData.append("id", id);
+                    )
+                }
+            })
 
-        console.log(formData.get("id"));
 
-        fetch(routeDeleteServerRequest[0], {
-                method: "POST",
-                body: formData
-            }).then(res => res.json())
-            .then(data => console.log(data))
-
+        })
     })
 
 
