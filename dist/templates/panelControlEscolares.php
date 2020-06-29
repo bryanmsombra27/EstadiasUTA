@@ -40,12 +40,12 @@ if (isset($_SESSION['user'])) : ?>
                     <li class="dropdown__content--element"> <a href="registro/RegistroCarreras.php"> Carreras</a></li>
                     <li class="dropdown__content--element"> <a href="registro/registroNiveles.php"> Nivel de estudios </a>
                     </li>
-                    <li class="dropdown__content--element"> <a href="registro/RegistroMateriasphp"> Materias </a></li>
-                    <li class="dropdown__content--element"> <a href="registro/registroMotivosBajaphp"> Motivos de baja
+                    <li class="dropdown__content--element"> <a href="registro/RegistroMaterias.php"> Materias </a></li>
+                    <li class="dropdown__content--element"> <a href="registro/registroMotivosBaja.php"> Motivos de baja
                         </a></li>
-                    <li class="dropdown__content--element"> <a href="registro/RegistroEstatusAlumnosphp"> Estatus alumnos
+                    <li class="dropdown__content--element"> <a href="registro/RegistroEstatusAlumnos.php"> Estatus alumnos
                         </a></li>
-                    <li class="dropdown__content--element"> <a href="registro/FotografiaAlumnosphp"> Fotografia alumnos
+                    <li class="dropdown__content--element"> <a href="registro/FotografiaAlumnos.php"> Fotografia alumnos
                         </a></li>
                 </ul>
             </div>

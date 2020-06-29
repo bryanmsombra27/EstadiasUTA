@@ -6,7 +6,8 @@ import {
 } from './routes.js';
 import {
     personalFormPopUp,
-    docentesFormPopUp
+    docentesFormPopUp,
+    CarreraFormPopUp
 } from './formulariosPopUp.js';
 
 const deletePersonal = async (id, url) => {
@@ -26,8 +27,9 @@ const deletePersonal = async (id, url) => {
         body: formData
     })
     const data = await res.json();
-
-    return data;
+    if (data.exito) {
+        location.reload();
+    }
 }
 
 let id = 0;
@@ -46,9 +48,10 @@ const popup = () => {
             id = +e.target.dataset.id;
             e.preventDefault();
             popup.style.display = "block";
-            let url = location.href;
-            console.log(url)
 
+            let url = location.href;
+
+            console.log(id)
             //crear una funcion para que dependiendo la ruta en la que se encuentre actualmente  la funcion en automatico sepa que informacion debe traer
             switch (url) {
                 case `${routeUpdateRequest[0]}`:
@@ -59,7 +62,12 @@ const popup = () => {
                     docentesFormPopUp(routesServerRequest[3], id);
                     console.log(url)
                     break;
+                case `${routeUpdateRequest[2]}`:
+                    console.log(id)
 
+                    CarreraFormPopUp(routesServerRequest[2], id);
+                    console.log(url)
+                    break;
             }
 
         })
@@ -67,12 +75,24 @@ const popup = () => {
 
     deleteBtns.forEach(deleteBtn => {
         deleteBtn.addEventListener('click', function (e) {
-
+            let url = location.href;
+            let titulo;
             e.preventDefault();
             id = +e.target.previousElementSibling.dataset.id;
+            if (url === routeDeleteRequest[0] || url === routeDeleteRequest[1]) {
+
+                let apellidoP = e.target.parentElement.parentElement.children[1].textContent;
+                let apellidoM = e.target.parentElement.parentElement.children[2].textContent;
+                let nombre = e.target.parentElement.parentElement.children[3].textContent;
+                titulo = `¿Esta Seguro de Eliminar a ${nombre} ${apellidoM} ${apellidoP}?`;
+            } else if (url === routeDeleteRequest[2]) {
+                let nombre = e.target.parentElement.parentElement.children[1].textContent;
+                titulo = `¿Esta Seguro de Eliminar la carrera de ${nombre} ?`;
+            }
+
             // id = +e.target.popup.dataset.id;
             Swal.fire({
-                title: '¿Esta Seguro de Eliminar este Personal?',
+                title: titulo,
                 text: "No sera posible a este usuario volver a acceder al sistema!",
                 icon: 'warning',
                 showCancelButton: true,
@@ -87,14 +107,16 @@ const popup = () => {
                         'se elimino el usuario correctamente.',
                         'success'
                     )
-                    deletePersonal(id, routeDeleteServerRequest[0]).then(
-                        data => {
-                            if (data.exito) {
-                                location.reload();
-                            }
-                        }
-
-                    )
+                    switch (url) {
+                        case `${routeDeleteRequest[0]}`:
+                            deletePersonal(id, routeDeleteServerRequest[0]);
+                            break;
+                        case `${routeDeleteRequest[1]}`:
+                            console.log(url);
+                            console.log(id)
+                            deletePersonal(id, routeDeleteServerRequest[1]);
+                            break;
+                    }
                 }
             })
 
@@ -105,7 +127,11 @@ const popup = () => {
 
     //cerrar ventana emergente (POPUP)
     closePopup.addEventListener('click', () => {
-        popup.style.display = "none";
+
+        popup.style.display = "none"
+
+
+
     })
 };
 

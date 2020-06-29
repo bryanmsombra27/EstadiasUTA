@@ -421,8 +421,24 @@ input[type="number"] {
   left: 0;
   width: 100%;
   min-height: 100%;
+  animation: popup .5s linear both;
+  -webkit-animation: popup .5s linear;
   display: none;
 }
+
+@keyframes popup {
+  0% {
+    opacity: 0;
+  }
+
+
+  100% {
+    opacity: 1;
+  }
+
+
+}
+
 
 .popup {
   font-family: arial;
@@ -439,6 +455,7 @@ input[type="number"] {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   font-family: 'Courier New', Courier, monospace;
+
 }
 
 .popup-close {
@@ -449,6 +466,19 @@ input[type="number"] {
   font-size: 1.9rem;
   color: red;
 
+
+}
+
+@keyframes popupClose {
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
 .popup-content h2 {

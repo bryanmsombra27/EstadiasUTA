@@ -41,15 +41,19 @@ const routeUpdateServerRequest = [
 ];
 const routeUpdateRequest = [
     "http://localhost/InterfacesParaEstadias/dist/templates/cambios/PersonalRegistrado.php",
-    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/DocentesRegistrados.php"
+    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/DocentesRegistrados.php",
+    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/CarrerasRegistradas.php"
 ]
 
 //PETICIONES DELETE
 const routeDeleteServerRequest = [
-    "http://localhost/backendsiacc/controllers/eliminarPersonal.php"
+    "http://localhost/backendsiacc/controllers/eliminarPersonal.php",
+    "http://localhost/backendsiacc/controllers/eliminarDocente.php"
 ];
 const routeDeleteRequest = [
-    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/PersonalRegistrado.php"
+    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/PersonalRegistrado.php",
+    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/DocentesRegistrados.php",
+    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/CarrerasRegistradas.php"
 ];
 
 export {

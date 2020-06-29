@@ -222,8 +222,83 @@ const docentesFormPopUp = (url, id) => {
     });
 
 };
+const CarreraFormPopUp = (url, id) => {
+    const formPopup = document.getElementById('form-popup');
+    let newArray = [];
+
+    //se realiza una nueva consulta para traer los datos que concuerden con el id selecionado  y este pueda ser pintando en cada uno de los inputs en pantalla
+    fetch(url).then(res => res.json()).then(data => {
+
+        let carreraArray = data[1];
+        newArray = carreraArray.flat(Infinity).filter(dato => +dato.idcarrera === id);
+        let objetoPersonal = newArray[0];
+
+        console.log(objetoPersonal)
+
+        formPopup.innerHTML = `
+     <input type="hidden" name="id" value="${objetoPersonal.idcarrera}" id="idcarrera">
+      <div class="register-field">
+                     <div class="input-container">
+                         <label for="carrera" class="register-label">Carrera</label>
+                            <input type="text" class="register__input" value="${objetoPersonal.carrera}" id="carrera">
+                         </div>
+
+                     
+                     </div>
+
+                     <div class="register-field">
+                         <div class="input-container">
+                             <label for="clave" class="register-label">Clave</label>
+                             <input type="text" class="register__input" value="${objetoPersonal.clave}" id="clave">
+                         </div>
+                         <div class="input-container">
+                             <label for="clave" class="register-label">Plan</label>
+                             <input type="text" class="register__input" value="${objetoPersonal.plan}" id="plan">
+                         </div>
+
+                         <div class="input-container">
+                             <label for="clave" class="register-label">Numero de materias</label>
+                             <input type="text" class="register__input" value="${objetoPersonal.num_materias}" id="num_materias">
+                         </div>
+
+                     </div>
+
+                      <div class="register-field">
+                         <div class="input-container">
+                             <label for="clave" class="register-label">Referencia Escolar</label>
+                             <input type="text" class="register__input" value="${objetoPersonal.ref_escuela}" id="ref_escuela">
+                         </div>
+
+                         <div class="input-container">
+                             <label for="clave" class="register-label">Numero de Carrera</label>
+                             <input type="text" class="register__input" value="${objetoPersonal.num_carerra}" id="num_carrera">
+                         </div>
+
+                         <div class="input-container">
+                             <label for="clave" class="register-label">Ciudad</label>
+                             <input type="text" class="register__input" value="${objetoPersonal.modalidad}" id="modalidad">
+                         </div>
+
+                     </div>                  
+                 <input class="register__input--submit" type="submit" value="Actualizar">
+           `;
+
+    }).catch(err => console.log(err));
+
+    /*ENVIAR LA PETICION DE ACTULIZAR LOS DATOS DE DOCENTES */
+    formPopup.addEventListener('submit', (e) => {
+        e.preventDefault();
+        actualizarDocentes(e, routeUpdateServerRequest[1]);
+
+
+    });
+
+};
+
+
 
 export {
     personalFormPopUp,
-    docentesFormPopUp
+    docentesFormPopUp,
+    CarreraFormPopUp
 }

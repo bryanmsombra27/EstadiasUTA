@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../../css/spiners.css">
         <link rel="stylesheet" href="../../css/registros.css">
         <link rel="stylesheet" href="../../css/Tablas.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
         <script src="../../js/alumnosPrueba.js" defer type="module"></script>
     </head>
 
@@ -71,6 +72,44 @@
 
             <!--<a href="../panelControlEscolares.php" class="table__button">Panel de Control</a> -->
         </section>
+
+        <!-- Inicio POPUP -->
+        <div class="popup-wrapper">
+            <div class="popup">
+                <div class="popup-close">X</div>
+                <div class="popup-content">
+                    <h2>Actualizar Carrera</h2>
+                    <form action="#" class="register__form" id="form-popup">
+                        <!-- <div class="register-field">
+                        <div class="input-container">
+                            <label for="clave" class="register-label">Clave</label>
+                            <input type="text" class="register__input">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="clave" class="register-label">Apellido Paterno</label>
+                            <input type="text" class="register__input">
+                        </div>
+                    </div>
+
+                    <div class="register-field">
+                        <div class="input-container">
+                            <label for="clave" class="register-label">Apellido Materno</label>
+                            <input type="text" class="register__input">
+                        </div>
+
+                        <div class="input-container">
+                            <label for="clave" class="register-label">Nombre</label>
+                            <input type="text" class="register__input">
+                        </div>
+
+                    </div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Fin POPUP -->
+
 
 
         <footer class="footer">

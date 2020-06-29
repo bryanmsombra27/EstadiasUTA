@@ -11,7 +11,7 @@ const PanelControlButton = () => {
     const a = document.createElement('a');
     a.classList.add('table__button');
     a.textContent = 'Panel de control';
-    a.href = "../panelControlEscolares.html";
+    a.href = "../panelControlEscolares.php";
 
     PanelControlBtn.append(a);
 };
@@ -20,7 +20,7 @@ const PanelControlButton2 = () => {
     const a = document.createElement('a');
     a.classList.add('table__button');
     a.textContent = 'Panel de control';
-    a.href = "../panelControlDocentes.html";
+    a.href = "../panelControlDocentes.php";
 
     PanelControlBtn.append(a);
 };
@@ -109,7 +109,7 @@ const docentes = (url) => {
                       <td class="table__item">${docente.nombre}</td>
                       <td class="table__item--actions">
                         <a href="#" class="table__item--modify popup2" id="popup" data-id="${docente.id_docente}">Modificar</a>
-                        <a href="#" class="table__item--delete" id="delete-popup">Eliminar</a>
+                        <a href="#" class="table__item--delete delete-popup" id="delete-popup">Eliminar</a>
                     </td>
                
 
@@ -124,24 +124,30 @@ const docentes = (url) => {
 };
 
 const carreras = async (url) => {
-    const res = await fetch(url);
-    const data = await res.json();
+    // const res = await fetch(url);
+    // const data = await res.json();
 
-    const carrerasEl = data[1];
-
-    carrerasEl.forEach(carrera => {
-        impreso.innerHTML += `
+    fetch(url).then(res => res.json()).then(data => {
+        const carrerasEl = data[1];
+        console.log(carrerasEl);
+        carrerasEl.forEach(carrera => {
+            impreso.innerHTML += `
                    <tr class="table__row2">
                            <td class="table__item">${carrera.clave}</td>
                            <td class="table__item">${carrera.carrera}</td>
                            <td class="table__item">${carrera.plan}</td>
                            <td class="table__item--actions flex">
-                             <a href="#" class="table__item--modify">Modificar</a>
-                             <a href="#" class="table__item--delete">Eliminar</a>
+                             <a href="#" class="table__item--modify popup2" data-id="${carrera.idcarrera}">Modificar</a>
+                             <a href="#" class="table__item--delete delete-popup" id="delete-popup">Eliminar</a>
                          </td>
            `;
-    })
-    paginacion(); //paginacion solo sirve para cuando hay demasiados registros con registros minimos no funciona del todo
+        })
+        popup();
+        PanelControlButton();
+        paginacion(); //paginacion solo sirve para cuando hay demasiados registros con registros minimos no funciona del todo
+
+    }).catch(err => console.log(err));
+
 
 }
 
