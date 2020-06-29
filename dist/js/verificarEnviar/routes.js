@@ -44,11 +44,21 @@ const routeUpdateRequest = [
     "http://localhost/InterfacesParaEstadias/dist/templates/cambios/DocentesRegistrados.php"
 ]
 
+//PETICIONES DELETE
+const routeDeleteServerRequest = [
+    "http://localhost/backendsiacc/controllers/eliminarPersonal.php"
+];
+const routeDeleteRequest = [
+    "http://localhost/InterfacesParaEstadias/dist/templates/cambios/PersonalRegistrado.php"
+];
+
 export {
     routesServer,
     routes,
     routesServerRequest,
     routeRequest,
     routeUpdateServerRequest,
-    routeUpdateRequest
+    routeUpdateRequest,
+    routeDeleteServerRequest,
+    routeDeleteRequest
 };

@@ -1,6 +1,8 @@
 import {
     routesServerRequest,
-    routeUpdateRequest
+    routeUpdateRequest,
+    routeDeleteServerRequest,
+    routeDeleteRequest
 } from './routes.js';
 import {
     personalFormPopUp,
@@ -15,6 +17,8 @@ const popup = () => {
     const deleteBtn = document.getElementById('delete-popup');
     let popup = document.querySelector('.popup-wrapper');
     let closePopup = document.querySelector('.popup-close');
+    // const deleteForm = document.querySelector('#delete-form');
+
 
     //BOTON DE ACCION PARA ACTUALIZAR REGISTROS
     botones.forEach(boton => {
@@ -42,8 +46,21 @@ const popup = () => {
     })
 
     deleteBtn.addEventListener('click', function (e) {
+
         e.preventDefault();
         id = +e.target.previousElementSibling.dataset.id;
+        // id = +e.target.popup.dataset.id;
+        let formData = new FormData();
+
+        formData.append("id", id);
+
+        console.log(formData.get("id"));
+
+        fetch(routeDeleteServerRequest[0], {
+                method: "POST",
+                body: formData
+            }).then(res => res.json())
+            .then(data => console.log(data))
 
     })
 

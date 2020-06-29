@@ -78,7 +78,7 @@ const koso = async (e) => {
     contrasenaContainer.querySelector('small').remove();
   }
 
-
+  console.log(data);
   if (location.href === "http://localhost/InterfacesParaEstadias/dist/templates/login/loginEscolares.php") {
 
     if (data[1]) {

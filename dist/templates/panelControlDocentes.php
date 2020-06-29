@@ -100,9 +100,10 @@ if (isset($_SESSION['user'])) : ?>
                 </ul>
             </div>
             <div class="flex">
-                <a href="#" class="docentes__button">Cerrar
+                <a href="http://localhost/backendsiacc/controllers/cerrarDocentes.php" class="docentes__button" id="cerrar-sesion">Cerrar
                     Sesión</a>
             </div>
+            <?php var_dump($_SESSION) ?>
         </main>
 
 
