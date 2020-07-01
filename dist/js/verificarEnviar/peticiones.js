@@ -24,6 +24,22 @@ const PanelControlButton2 = () => {
 
     PanelControlBtn.append(a);
 };
+const PanelControlButton3 = () => {
+    const div = document.createElement('div');
+    div.classList.add('register__buttons');
+    const a = document.createElement('a');
+    a.classList.add('table__button');
+    a.textContent = 'Panel de control';
+    a.href = "../panelControlEscolares.php";
+    const a2 = document.createElement('a');
+    a2.classList.add('table__button');
+    a2.classList.add('inscribir');
+    a2.textContent = 'Registrar Alumno';
+    a.href = "../panelControlEscolares.php";
+    div.append(a);
+    div.append(a2);
+    PanelControlBtn.append(div);
+}
 
 const spiner = () => {
     const div = document.createElement('div');
@@ -43,6 +59,7 @@ function paginacion() {
 
 
 /***PETICIONES GET */
+/*ALUMNOS EVALUAR */
 const alumnos = async (url) => {
     const res = await fetch(url);
     const data = await res.json();
@@ -69,6 +86,35 @@ const alumnos = async (url) => {
     paginacion();
     PanelControlButton2();
 };
+const alumnosRegistrados = (url) => {
+    fetch(url).then(res => res.json()).then(data => {
+        data.forEach((alumno, index) => {
+            impreso.innerHTML += `
+                 <tr class="table__row2">
+                    <td class="table__item">${alumno.matricula}</td>
+                    <td class="table__item">${alumno.ap_paterno}</td>
+                    <td class="table__item">${alumno.ap_materno}</td>
+                    <td class="table__item">${alumno.nombre}</td>
+                    <td class="table__item">${alumno.direccion}</td>
+                    <td class="table__item">${alumno.telefono}</td>
+                    <td class="table__item">${alumno.ref_carrera}</td>
+
+                    <td class="table__item--actions">       
+                        <a href="#" class="table__item--modify popup2" id="popup" data-id="${alumno.idalumno}">Modificar</a>
+                        <a href="#" class="table__item--delete button__extra-size--delete delete-popup" id="delete-popup">Eliminar</a>
+                    </td>
+                </tr>
+
+      `;
+        });
+        popup();
+        paginacion();
+        PanelControlButton3();
+    })
+
+
+};
+
 
 const personal = (url) => {
     fetch(url).then(res => res.json()).then(data => {
@@ -156,5 +202,6 @@ export {
     alumnos,
     docentes,
     carreras,
-    personal
+    personal,
+    alumnosRegistrados
 };

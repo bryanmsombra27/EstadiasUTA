@@ -27,6 +27,10 @@ body {
   font-size: 3.5rem;
 }
 
+.table-container.activo {
+  min-height: auto;
+  height: 250vh;
+}
 
 
 .register-field {

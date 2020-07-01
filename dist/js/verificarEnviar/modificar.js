@@ -7,7 +7,8 @@ import {
 import {
     personalFormPopUp,
     docentesFormPopUp,
-    CarreraFormPopUp
+    CarreraFormPopUp,
+    alumnosRegistradosFormPopUp
 } from './formulariosPopUp.js';
 
 const deletePersonal = async (id, url) => {
@@ -39,6 +40,7 @@ const popup = () => {
     const deleteBtns = document.querySelectorAll('.delete-popup');
     let popup = document.querySelector('.popup-wrapper');
     let closePopup = document.querySelector('.popup-close');
+    let sectionContainer = document.querySelector('.table-container');
     // const deleteForm = document.querySelector('#delete-form');
 
 
@@ -64,11 +66,17 @@ const popup = () => {
                     break;
                 case `${routeUpdateRequest[2]}`:
                     console.log(id)
-
                     CarreraFormPopUp(routesServerRequest[2], id);
                     console.log(url)
                     break;
+                case `${routeUpdateRequest[3]}`:
+                    console.log(id)
+                    sectionContainer.classList.add('activo');
+                    alumnosRegistradosFormPopUp(routesServerRequest[0], id);
+                    console.log(url)
+                    break;
             }
+
 
         })
     })
@@ -79,7 +87,7 @@ const popup = () => {
             let titulo;
             e.preventDefault();
             id = +e.target.previousElementSibling.dataset.id;
-            if (url === routeDeleteRequest[0] || url === routeDeleteRequest[1]) {
+            if (url === routeDeleteRequest[0] || url === routeDeleteRequest[1] || routeDeleteRequest[2]) {
 
                 let apellidoP = e.target.parentElement.parentElement.children[1].textContent;
                 let apellidoM = e.target.parentElement.parentElement.children[2].textContent;
@@ -116,22 +124,21 @@ const popup = () => {
                             console.log(id)
                             deletePersonal(id, routeDeleteServerRequest[1]);
                             break;
+                        case `${routeDeleteRequest[3]}`:
+                            deletePersonal(id, routeDeleteServerRequest[2]);
+                            break;
                     }
                 }
             })
-
-
         })
     })
 
-
     //cerrar ventana emergente (POPUP)
     closePopup.addEventListener('click', () => {
-
         popup.style.display = "none"
-
-
-
+        if (sectionContainer.classList.contains('activo')) {
+            sectionContainer.classList.remove('activo');
+        }
     })
 };
 

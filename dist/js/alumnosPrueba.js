@@ -7,7 +7,8 @@ import {
     alumnos,
     docentes,
     carreras,
-    personal
+    personal,
+    alumnosRegistrados
 } from './verificarEnviar/peticiones.js';
 
 //obteniendo la url de la ubicacion actual
@@ -30,5 +31,9 @@ switch (url) {
     case `${routeRequest[3]}`:
         spiner();
         carreras(routesServerRequest[2]);
+        break;
+    case `${routeRequest[4]}`:
+        spiner();
+        alumnosRegistrados(routesServerRequest[0]);
         break;
 }
