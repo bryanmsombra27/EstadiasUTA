@@ -210,7 +210,7 @@ if (isset($_SESSION['user'])) : ?>
         </main>
         <footer class="footer">
             <div class="container">
-                <p>Desarrollado por: Koso 2020 &copy;</p>
+                <p>Desarrollado por: Divelopers 2020 &copy;</p>
             </div>
         </footer>
         <a href=""></a>

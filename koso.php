@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Document</title>
-	<link rel="stylesheet" href="dist/css/normalize.css">
+	<!-- <link rel="stylesheet" href="dist/css/normalize.css"> -->
 	<link rel="stylesheet" href="dist/css/main.css">
 </head>
 
@@ -91,7 +91,7 @@
 
 	<footer class="footer">
 		<div class="container">
-			<p>Desarrollado por: Koso 2020 &copy;</p>
+			<p>Desarrollado por: Divelopers 2020 &copy;</p>
 		</div>
 	</footer>
 </body>

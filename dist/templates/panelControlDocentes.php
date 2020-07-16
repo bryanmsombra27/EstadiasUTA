@@ -103,13 +103,12 @@ if (isset($_SESSION['user'])) : ?>
                 <a href="http://localhost/backendsiacc/controllers/cerrarDocentes.php" class="docentes__button" id="cerrar-sesion">Cerrar
                     Sesión</a>
             </div>
-            <?php var_dump($_SESSION) ?>
         </main>
 
 
         <footer class="footer">
             <div class="container">
-                <p>Desarrollado por: Koso 2020 &copy;</p>
+                <p>Desarrollado por: Divelopers 2020 &copy;</p>
             </div>
         </footer>
 

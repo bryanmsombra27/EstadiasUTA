@@ -63,7 +63,7 @@
         <div class="popup">
             <div class="popup-close">X</div>
             <div class="popup-content">
-                <h2>Solicitar Demo</h2>
+                <h2>Actualizar Datos del Docente</h2>
                 <form action="#" class="register__form" id="form-popup">
                     <!-- <div class="register-field">
                         <div class="input-container">
@@ -98,7 +98,7 @@
 
     <footer class="footer">
         <div class="container">
-            <p>Desarrollado por: Koso 2020 &copy;</p>
+            <p>Desarrollado por: Divelopers 2020 &copy;</p>
         </div>
     </footer>
 

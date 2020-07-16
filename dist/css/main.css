@@ -66,7 +66,8 @@ html {
   -moz-transition: 0.5s ease-in-out;
   -ms-transition: 0.5s ease-in-out;
   -o-transition: 0.5s ease-in-out;
-  height: 100vh;
+  min-height: 100vh;
+
 }
 
 .content img {
@@ -146,13 +147,19 @@ html {
   font-weight: 400;
 }
 
-MEDIA QUERIES @media (max-width: 900px) {
+@media (max-width: 900px) {
   .content {
     margin: 2rem 3rem;
+    height: 100%;
   }
 
   .content__menu a img {
     max-width: 25%;
+  }
+
+  .content__menu {
+    /* margin: 0 4rem; */
+    /* height: 200px; */
   }
 
   .header__img-container a img {
@@ -168,8 +175,13 @@ MEDIA QUERIES @media (max-width: 900px) {
 
 @media (max-width: 600px) {
   .content {
-    row-gap: 15rem;
-    margin-bottom: 35rem;
+    height: 100%;
+
+  }
+
+  .content__menu {
+    display: block;
+    margin: 0 2rem;
   }
 
   .content__menu a img {
@@ -190,6 +202,10 @@ MEDIA QUERIES @media (max-width: 900px) {
     margin: 0 auto;
     display: block;
     flex-basis: 80%;
+  }
+
+  .footer p {
+    font-size: 1.6rem;
   }
 }
 
